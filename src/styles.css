@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Bu kod projenin ilerleyen kısımlarında kullanacağımız divlerde işe yarayabilir */
+.skewed {
+    transform: skewX(-30deg);
+    transform-origin: 0;
+    border-radius: 5px;
+}
+
+.unskewed {
+    transform: skewX(30deg);
+    margin: 1px 5px;
+}
+
+.skewed-frame {
+    transform: skewX(-3deg);
+    transform-origin: 0;
+    border-radius: 25px;
+}
+
+.unskewed-frame {
+    transform: skewX(3deg);
+    margin: 1px 5px;
+}
