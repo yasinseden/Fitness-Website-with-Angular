@@ -1,12 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
-* {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
 
 a {
     text-decoration: none;
     font-weight: bolder;
     color: inherit;
+}
+
+.a-non-bolder {
+    font-weight: normal;
 }
 
 /* Bu kod projenin ilerleyen kısımlarında kullanacağımız divlerde işe yarayabilir */
@@ -45,7 +46,7 @@ a {
     transform: scaleX(0.3);
     transition: all 0.5s ease;
 }
-/* home-body deki Our mission ... başlığındaki kullanımda soldan ve sağdan fzla dışarı çıktığı için şimdilik 0.63 scale yaptım. İlerleyen dönemlerde nasıl düzeltileceğini öğren */
+
 .red-underline:hover::after {
     transform: scaleX(1);
 }
@@ -80,5 +81,56 @@ a {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
+.flashcard {
+    position: relative;
+    height: 80vh;
+}
+
+.front, .back {
+    position: absolute;
+    width: 75%;
+    height: 75%;
+    backface-visibility: hidden;
+    transition: 0.5s;
+
+    background-image: url(assets/pics/A-Man-Lifting-Dumbell-Biceps.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.front {
+    transform: rotateY(0deg);
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.back-c {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    background-color: rgb(6, 6, 6, 0.6);
+    border: 2px solid rgb(163, 22, 22);
+    text-align: center;
+}
+
+.flashcard:hover .front {
+    transform: rotateY(180deg);
+}
+
+.flashcard:hover .back {
+    transform: rotateY(0deg);
+}
+
+.flashcard-big-font {
+    font-size: 2rem;
+}
+
+
+
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; }
