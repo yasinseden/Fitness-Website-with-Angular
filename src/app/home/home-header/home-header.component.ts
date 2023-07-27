@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class HomeHeaderComponent {
 
+  displayClass: string = 'd-none'
+  displayStiation: boolean = false
+
+  displayClick() {
+    if (!this.displayStiation) {
+      this.displayClass = ''
+      this.displayStiation = true
+    }
+  }
+
 }

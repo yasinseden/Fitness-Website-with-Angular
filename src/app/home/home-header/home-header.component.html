@@ -1,5 +1,35 @@
 <div>
-    <div style="height: 700px; display: flex;">
+    <div id="navbar" style="width: 100%; padding-left: 10vw; padding-right: 10vw; margin-top: 2vh; position: relative; z-index: 1; top: 1vh;">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="skewed p-1" style="display: inline-block; border: 1px solid red; margin-left: 1rem;">
+                <img src="assets\pics\logo-removebg-preview.png" height="25px" alt="" class="unskewed">
+            </div>
+            <div id="navbar-icons" class="d-flex justify-content-between" style="margin-top: 6px;">
+                <div class="d-flex flex-column align-items-center">
+                    <i class="fa-solid fa-dumbbell fa-lg" style="color: #ff0000; margin: auto;"></i>
+                    <p style="margin: 10px 0 0;">Exercises</p>
+                </div>
+                <div class="d-flex flex-column align-items-center" style="margin-left: 18vh;">
+                    <i class="fa-solid fa-graduation-cap fa-lg" style="color: #ff0000; margin: auto;"></i>
+                    <p style="margin: 10px 0 0;">Learn</p>
+                </div>
+                <div class="d-flex flex-column align-items-center" style="margin-left: 18vh;">
+                    <i class="fa-solid fa-circle-info fa-lg" style="color: #ff0000; margin: auto;"></i>
+                    <p style="margin: 10px 0 0;">About</p>
+                </div>
+            </div>
+            <div>
+                <button
+                    style="display: flex; justify-content: center; align-items: center; background-color: rgb(255, 0, 0, 0.7); padding: 5px; color: white; border: none;"
+                    class="skewed" (click)="displayClick()">
+                    <p class="unskewed" style="margin: 1px 5px;">GET STARTED</p>
+                    <i class="fa-solid fa-angles-right fa-xs unskewed"></i>
+                </button>
+            </div>
+        </div>
+        
+    </div>
+    <div style="height: 700px; display: flex; margin-top: -6vh;">
         <div style="width: 45%; display: flex; justify-content: center; align-items: center;">
             <div
                 style="display: flex; justify-content: center; align-items: center; font-size: 55px; text-align: start; width: 75%; padding-left: 50px; line-height: 100%; line-clamp: 3;">
@@ -29,10 +59,14 @@
             </div>
         </div>
         <button
-            style="display: flex; justify-content: center; align-items: center; background-color: red; padding: 5px; color: inherit; border: none;"
+            style="display: flex; justify-content: center; align-items: center; background-color: rgb(255, 0, 0, 0.7); padding: 5px; color: inherit; border: none;"
             class="skewed">
             <p class="unskewed" style="margin: 1px 5px;">Get Daily Updates</p>
             <i class="fa-solid fa-angles-right fa-xs unskewed"></i>
         </button>
     </div>
+</div>
+
+<div class="w-75 h-75" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: aquamarine; border-radius: 25px; z-index: 10;" [ngClass]="displayClass">
+    <video src="" width="75%"></video>
 </div>

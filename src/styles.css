@@ -10,7 +10,6 @@ a {
     font-weight: normal;
 }
 
-/* Bu kod projenin ilerleyen kısımlarında kullanacağımız divlerde işe yarayabilir */
 .skewed {
     transform: skewX(-30deg);
     transform-origin: 0;
@@ -137,6 +136,7 @@ a {
 .color-gray {
     color: #3e3e3e;
 }
+
 
 
 
