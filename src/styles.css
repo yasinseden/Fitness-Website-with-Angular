@@ -130,6 +130,14 @@ a {
     font-size: 2rem;
 }
 
+.color-gray-soft {
+    color: #6c6c6c;
+}
+
+.color-gray {
+    color: #3e3e3e;
+}
+
 
 
 html, body { height: 100%; }
