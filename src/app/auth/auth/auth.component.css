@@ -1,0 +1,11 @@
+.btn-auth {
+    background: transparent;
+    border: none;
+}
+
+.auth-gorilla {
+    background-color: #530e0e;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: inset 75px 75px 55px rgba(0, 0, 0, 0.7);
+}

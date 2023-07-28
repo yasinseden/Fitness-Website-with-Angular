@@ -14,6 +14,9 @@ export class HomeHeaderComponent {
     if (!this.displayStiation) {
       this.displayClass = ''
       this.displayStiation = true
+    } else {
+      this.displayClass = 'd-none'
+      this.displayStiation = false
     }
   }
 
