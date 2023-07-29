@@ -1,12 +1,15 @@
-<div style="height: 97vh; background-color: #919191;">
+<div style="height: 97vh; background-color: rgb(22, 22, 22);">
     <div class="row p-4" style="height: 15%; margin-left: 1rem;">
-        <button class="h-100" style="width: 17%; padding: 0; background: transparent; border: none;">
-            <img src="assets\pics\logo-removebg-preview.png" alt="" height="100%">
-        </button>
+        <div class="skewed" style="width: 16%; height: 100%; border: 3px solid red; padding: 1px; margin-left: 2vw;">
+            <button class="h-100 unskewed" style="width: 100%; margin: 0; background: transparent; border: none;" routerLink="/">
+                <img src="assets\pics\logo-removebg-preview.png" alt="" height="100%">
+            </button>
+
+        </div>
     </div>
     <div class="row" style="height: 85%;">
         <div class="col-5 h-100 pb-5 d-flex justify-content-end">
-            <button class="h-100 w-75 btn-auth">
+            <button class="h-100 w-75 btn-auth" routerLink="/auth/login">
                 <div class="h-100 w-100 auth-gorilla">
                     <div class="h-75 p-2 d-flex justify-content-center align-items-center">
                         <img src="assets\pics\gorilla-gb5468db4d_1920.png" alt="" height="100%">

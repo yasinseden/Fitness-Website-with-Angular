@@ -8,15 +8,15 @@ import { Component } from '@angular/core';
 export class HomeHeaderComponent {
 
   displayClass: string = 'd-none'
-  displayStiation: boolean = false
+  displaySituation: boolean = false
 
   displayClick() {
-    if (!this.displayStiation) {
+    if (!this.displaySituation) {
       this.displayClass = ''
-      this.displayStiation = true
+      this.displaySituation = true
     } else {
       this.displayClass = 'd-none'
-      this.displayStiation = false
+      this.displaySituation = false
     }
   }
 

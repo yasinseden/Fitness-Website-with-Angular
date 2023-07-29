@@ -4,12 +4,14 @@ import { MaterialModule } from 'src/app/shared/material/material.module';
 import { AuthComponent } from './auth/auth.component';
 import { AuthRoutingModule } from './auth-routing.module';
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
 
 
 
 @NgModule({
   declarations: [
-    AuthComponent
+    AuthComponent,
+    LoginComponent
   ],
   imports: [
     CommonModule,
