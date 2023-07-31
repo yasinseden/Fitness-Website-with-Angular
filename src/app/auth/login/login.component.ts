@@ -11,7 +11,7 @@ export class LoginComponent {
   public loginForm = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', Validators.required),
-  })  
+  })
 
   get f(): { [key: string]: AbstractControl } {
     return this.loginForm.controls

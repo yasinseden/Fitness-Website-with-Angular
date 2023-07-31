@@ -6,6 +6,7 @@ import { AuthRoutingModule } from './auth-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { SelectionComponent } from './selection/selection.component';
+import { SignupComponent } from './signup/signup.component';
 
 
 
@@ -13,7 +14,8 @@ import { SelectionComponent } from './selection/selection.component';
   declarations: [
     AuthComponent,
     LoginComponent,
-    SelectionComponent
+    SelectionComponent,
+    SignupComponent
   ],
   imports: [
     CommonModule,

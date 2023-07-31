@@ -1,0 +1,13 @@
+.signup-link {
+    color: rgba(158,183,165,255);
+    text-decoration: underline;
+    margin-left: 5px;
+}
+
+.signup-link:hover {
+    color: rgba(24,23,20,255);
+}
+
+.form-field-margin {
+    margin-left: 3%;
+}

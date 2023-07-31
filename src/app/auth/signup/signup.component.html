@@ -1,0 +1,106 @@
+<div
+    style="background-image: url(assets/pics/Baby-Gorilla-Background.png); background-size: cover; background-repeat: no-repeat; min-height: 100vh;">
+    <div class="container" style="height: 100vh;">
+        <div class="row h-100">
+            <div class="col-5">
+
+            </div>
+            <div class="col-7 d-flex align-items-center h-100">
+                <!-- SignupForm container -->
+                <div class="signup-form-container p-4 w-75"
+                    style="background-color: rgba(0, 75, 25, 0.75); border-radius: 25px;">
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="col-3" style="height: 5rem;">
+                            <div class="d-flex justify-content-center align-items-center h-100 "
+                                style="border-radius: 50%;">
+                                <img src="assets/pics/Gorilla-With-Dumbbell-2.png" alt="" height="100%">
+                            </div>
+                        </div>
+                        <div class="col-9">
+                            <h2 style="margin: 0; font-size: 30px; color: rgba(24,23,20,255);"><b>WELCOME YOU'RE NEW
+                                    HERE</b></h2>
+                        </div>
+                    </div>
+                    <form class="mt-4 signup-form" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+                        <!-- Signup Form username field -->
+                        <mat-form-field class="w-48 mt-3" appearance="outline">
+                            <mat-label>Username</mat-label>
+                            <input type="text" matInput formControlName="userName" placeholder="username">
+                            <mat-error class="d-flex align-items-start">
+                                <p *ngIf="f['password'].errors && f['password'].errors['required']">Username
+                                    field can not be left blank
+                                </p>
+                            </mat-error>
+                            <mat-icon matPrefix>person</mat-icon>
+                        </mat-form-field>
+                        <!-- Signup Form password field -->
+                        <mat-form-field class="w-48 mt-3 form-field-margin" appearance="outline">
+                            <mat-label>Password</mat-label>
+                            <input type="password" matInput formControlName="password">
+                            <mat-error class="d-flex align-items-start">
+                                <p *ngIf="f['password'].errors && f['password'].errors['required']">Password
+                                    field can not be left blank
+                                </p>
+                                <p *ngIf="f['password'].errors && f['password'].errors['minlength']">Password
+                                    must be at least 8 characters long
+                                </p>
+                            </mat-error>
+                            <mat-icon matPrefix>key</mat-icon>
+                        </mat-form-field>
+                        <!-- Signup Form first name field -->
+                        <mat-form-field class="w-48 mt-3" appearance="outline">
+                            <mat-label>First Name</mat-label>
+                            <input type="text" matInput formControlName="firstName" placeholder="First Name">
+                            <mat-error class="d-flex align-items-start">
+                                <p *ngIf="f['password'].errors && f['password'].errors['required']">First name
+                                    field can not be left blank
+                                </p>
+                            </mat-error>
+                            <mat-icon matPrefix>assignment_ind</mat-icon>
+                        </mat-form-field>
+                        <!-- Signup Form last name field -->
+                        <mat-form-field class="w-48 mt-3 form-field-margin" appearance="outline">
+                            <mat-label>Last Name</mat-label>
+                            <input type="text" matInput formControlName="lastName" placeholder="Last Name">
+                            <mat-error class="d-flex align-items-start">
+                                <p *ngIf="f['password'].errors && f['password'].errors['required']">Last name
+                                    field can not be left blank
+                                </p>
+                            </mat-error>
+                            <mat-icon matPrefix>assignment_ind</mat-icon>
+                        </mat-form-field>
+                        <!-- Signup Form email field -->
+                        <mat-form-field class="w-48 mt-3" appearance="outline">
+                            <mat-label>Email</mat-label>
+                            <input type="email" matInput formControlName="email" placeholder="example@example.com">
+                            <mat-error class="d-flex align-items-start">
+                                <p *ngIf="f['email'].errors && f['email'].errors['required']">E-mail field can
+                                    not be left blank
+                                </p>
+                                <p *ngIf="f['email'].errors && f['email'].errors['email']">E-mail field must be in
+                                    e-mail format
+                                </p>
+                            </mat-error>
+                            <mat-icon matPrefix>mail</mat-icon>
+                        </mat-form-field>
+                        <!-- Signup Form phone number field -->
+                        <mat-form-field class="w-48 mt-3 form-field-margin" appearance="outline">
+                            <mat-label>Phone Number</mat-label>
+                            <input type="tel" matInput formControlName="phoneNumber" placeholder="5xx xxx xxxx">
+                            <mat-icon matPrefix>phone</mat-icon>
+                        </mat-form-field>
+                        <!-- Login Form Buttons and links -->
+                        <div class="d-flex justify-content-between align-items-center pt-3">
+                            <button [disabled]="signupForm.invalid" mat-raised-button class="mb-3 mt-3"><span>Sign Up</span>
+                            </button>
+                            <div class="d-flex" style="padding-right: 7em; color: rgba(177, 177, 177, 255);">
+                                <p>Already Have An Account?</p>
+                                <a href="/auth/login" class="signup-link"><span>Log In</span></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
