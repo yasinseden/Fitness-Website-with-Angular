@@ -1,1 +1,65 @@
-<p>login works!</p>
+<div
+    style="background-image: url(assets/pics/Background-Gorilla.png); background-size: cover; background-repeat: no-repeat; min-height: 100vh;">
+    <div class="container" style="height: 100vh;">
+        <div class="row h-100">
+            <div class="col-5">
+
+            </div>
+            <div class="col-7 d-flex align-items-center h-100">
+                <!-- LoginForm container -->
+                <div class="login-form-container p-4 w-75"
+                    style="background-color: rgba(106, 106, 106, 0.85); border-radius: 25px;">
+                    <div class="row d-flex justify-content-center align-items-center">
+                        <div class="col-3" style="height: 5rem;">
+                            <div class="d-flex justify-content-center align-items-center h-100 "
+                                style="border-radius: 50%;">
+                                <img src="assets/pics/Gorilla-With-Dumbbell-2.png" alt="" height="100%">
+                            </div>
+                        </div>
+                        <div class="col-9">
+                            <h2 style="margin: 0; font-size: 30px;"><b>WELCOME BACK</b></h2>
+                        </div>
+                    </div>
+                    <form class="login-form" [formGroup]="loginForm">
+                        <!-- Login Form username field -->
+                        <mat-form-field class="w-100 pt-4">
+                            <mat-label>Username or Email</mat-label>
+                            <input type="email" matInput formControlName="email" placeholder="Ex. example@example.com">
+                            <mat-error>
+                                <p *ngIf="f['email'].errors && f['email'].errors['required']" translate>E-mail field can
+                                    not be
+                                    left blank
+                                </p>
+                                <p *ngIf="f['email'].errors && f['email'].errors['email']">E-mail field must be in
+                                    e-mail format
+                                </p>
+                            </mat-error>
+                            <mat-icon matPrefix>person</mat-icon>
+                            <!-- Login Form password field -->
+                        </mat-form-field>
+                        <mat-form-field class="w-100 pt-5">
+                            <mat-label>Password</mat-label>
+                            <input type="password" matInput formControlName="password">
+                            <mat-error>
+                                <p *ngIf="f['password'].errors && f['password'].errors['required']" translate>Password
+                                    field can not be left blank
+                                </p>
+                            </mat-error>
+                            <mat-icon matPrefix>key</mat-icon>
+                        </mat-form-field>
+                        <!-- Login Form Buttons and links -->
+                        <div class="d-flex justify-content-between align-items-center">
+                            <button [disabled]="loginForm.invalid" mat-raised-button class="mb-3 mt-3"><span>Log
+                                    in</span>
+                            </button>
+                            <div style="padding-right: 7em; color: rgba(177, 177, 177, 255);">
+                                <a href="/auth" class="login-link"><span>Forgot Password</span></a>
+                                <a href="/signup" class="login-link" style="margin-left: 4em;"><span>Sign Up</span></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
