@@ -1,5 +1,5 @@
 <div
-    style="background-image: url(assets/pics/Baby-Gorilla-Background.png); background-size: cover; background-repeat: no-repeat; min-height: 100vh;">
+    style="background-image: url(assets/pics/Background-Gorilla.png); background-size: cover; background-repeat: no-repeat; min-height: 100vh;">
     <div class="container" style="height: 100vh;">
         <div class="row h-100">
             <div class="col-5">
@@ -89,9 +89,26 @@
                             <input type="tel" matInput formControlName="phoneNumber" placeholder="5xx xxx xxxx">
                             <mat-icon matPrefix>phone</mat-icon>
                         </mat-form-field>
+                        <!-- Signup Form role selection field -->
+                        <mat-form-field class="w-48 mt-3" style="min-width: 248px;" appearance="outline">
+                            <mat-label>Select Role</mat-label>
+                            <mat-select formControlName="role" disableRipple>
+                                <mat-option value="admin">Admin</mat-option>
+                                <mat-option value="user">User</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                        <!-- Signup Form birth year selection field -->
+                        <mat-form-field class="w-48 mt-3 form-field-margin" style="min-width: 248px;"
+                            appearance="outline">
+                            <mat-label>Birth Year</mat-label>
+                            <mat-select formControlName="birthYear" disableRipple>
+                                <mat-option *ngFor="let year of getYearsRange()" [value]="year">{{ year }}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
                         <!-- Login Form Buttons and links -->
                         <div class="d-flex justify-content-between align-items-center pt-3">
-                            <button [disabled]="signupForm.invalid" mat-raised-button class="mb-3 mt-3"><span>Sign Up</span>
+                            <button [disabled]="signupForm.invalid" mat-raised-button class="mb-3 mt-3"><span>Sign
+                                    Up</span>
                             </button>
                             <div class="d-flex" style="padding-right: 7em; color: rgba(177, 177, 177, 255);">
                                 <p>Already Have An Account?</p>

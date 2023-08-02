@@ -7,6 +7,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { SelectionComponent } from './selection/selection.component';
 import { SignupComponent } from './signup/signup.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -23,6 +24,7 @@ import { SignupComponent } from './signup/signup.component';
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ]
 })
 export class AuthModule { }

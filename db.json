@@ -1,0 +1,60 @@
+{
+  "users": [
+    {
+      "firstName": "Yasin",
+      "lastName": "Seden",
+      "userName": "ashil",
+      "email": "yasin@yasin.com",
+      "password": "12345678",
+      "phoneNumber": "5778962521",
+      "role": "admin",
+      "birthYear": 1996,
+      "id": 1
+    },
+    {
+      "firstName": "Mehmet",
+      "lastName": "Yıldız",
+      "userName": "mehmet20",
+      "email": "mehmet@yasin.com",
+      "password": "12345678",
+      "phoneNumber": "5468454862",
+      "role": "user",
+      "birthYear": 1991,
+      "id": 2
+    },
+    {
+      "firstName": "Arda",
+      "lastName": "Demir",
+      "userName": "konjense",
+      "email": "arda@yasin.com",
+      "password": "12345678",
+      "phoneNumber": "5468454862",
+      "role": "user",
+      "birthYear": 2001,
+      "id": 3
+    },
+    {
+      "firstName": "Deniz",
+      "lastName": "Yılmaz",
+      "userName": "kezzak",
+      "email": "deniz@yasin.com",
+      "password": "12345678",
+      "phoneNumber": "5468454862",
+      "role": "user",
+      "birthYear": 2004,
+      "id": 4
+    },
+    {
+      "firstName": "Kutluay",
+      "lastName": "Küpo",
+      "userName": "wavy",
+      "email": "kupo@yasin.com",
+      "password": "12345678",
+      "phoneNumber": "5468454862",
+      "role": "admin",
+      "birthYear": 1997,
+      "id": 5
+    }
+  ],
+  "exercises": []
+}
