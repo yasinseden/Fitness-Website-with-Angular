@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { UserModel } from 'src/app/models/user.model';
 
 @Component({
@@ -20,7 +21,7 @@ export class LoginComponent implements OnInit {
     password: new FormControl('', Validators.required),
   })
 
-  constructor(private _http: HttpClient) {}
+  constructor(private router: Router, private _http: HttpClient) { }
 
   ngOnInit(): void {
     this.getUsers();
@@ -37,29 +38,30 @@ export class LoginComponent implements OnInit {
     })
   }
 
-  
+  // Modify and update as needed. Remember this isn't a nice code snippet. You can code better 
   onSubmit() {
     const formValue = this.loginForm.value;
-     this.password = formValue.password as string;
-     this.userNameEmail = formValue.email as string;
-  }
-  
-  isUserValid(userNameEmail: string, password: string): boolean {
-    const user = this.users.find(user => user.email === userNameEmail && user.password === password);
-    return !!user;
-  }
+    this.password = formValue.password as string;
+    this.userNameEmail = formValue.email as string;
 
-  isUserValidClick() {
-    if (this.isUserValid(this.userNameEmail, this.password)) {
-      console.log('asddfasfknakf'); 
+    const validation = this.isUserValid(this.userNameEmail, this.password)
+
+    if (validation[0] == true && validation[1] == 'admin') {
+      this.router.navigate(['/user/trainer']);
+    } else if (validation[0] == true && validation[1] == 'user') {
+      this.router.navigate(['/user/athlete']);
     } else {
-      console.log('216416546');
+      console.log('USER COULD NOT FIND');
+      console.log(validation);
     }
-
-    console.log(this.userNameEmail);
-    console.log(this.password);
-    
   }
+
+  isUserValid(userNameEmail: string, password: string): any[] {
+    const user = this.users.find(user => user.email === userNameEmail && user.password === password);
+    const arr = [!!user, user?.role]
+    return arr;
+  }
+
 
   /* Just for learning
   arr: any[] = [
