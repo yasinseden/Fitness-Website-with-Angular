@@ -6,7 +6,7 @@ export class UserModel {
     password: string = '';
     phoneNumber: string = '';
     role: string = '';
-    birthYear: any | null = null; // modify as needed 
+    birthYear: any | null = null;
 
     getAge(): any {
         const currentDate = new Date();

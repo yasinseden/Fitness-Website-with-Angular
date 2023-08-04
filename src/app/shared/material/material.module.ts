@@ -30,6 +30,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatSlideToggleModule } from "@angular/material/slide-toggle";
 import { ClipboardModule } from '@angular/cdk/clipboard';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatDividerModule } from '@angular/material/divider';
 
 
 
@@ -57,6 +59,8 @@ import { ClipboardModule } from '@angular/cdk/clipboard';
     MatPaginatorModule,
     MatButtonToggleModule,
     MatSlideToggleModule,
+    MatSidenavModule,
+    MatDividerModule,
     ClipboardModule,
     
   ],
@@ -90,6 +94,8 @@ import { ClipboardModule } from '@angular/cdk/clipboard';
     MatPaginatorModule,
     MatButtonToggleModule,
     MatSlideToggleModule,
+    MatSidenavModule,
+    MatDividerModule,
     ClipboardModule
   ]
 })

@@ -5,6 +5,7 @@ import { UserRoutingModule } from './user-routing.module';
 import { UserComponent } from './user/user.component';
 import { TrainerInterfaceComponent } from './trainer-interface/trainer-interface.component';
 import { AthleteInterfaceComponent } from './athlete-interface/athlete-interface.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 
 
@@ -12,7 +13,8 @@ import { AthleteInterfaceComponent } from './athlete-interface/athlete-interface
   declarations: [
     UserComponent,
     TrainerInterfaceComponent,
-    AthleteInterfaceComponent
+    AthleteInterfaceComponent,
+    SidebarComponent
   ],
   imports: [
     CommonModule,

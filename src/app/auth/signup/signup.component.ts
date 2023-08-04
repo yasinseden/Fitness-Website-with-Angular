@@ -1,7 +1,7 @@
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
 import { UserModel } from 'src/app/models/user.model';
+import { UserHttpService } from 'src/app/shared/services/user-http.service';
 
 @Component({
   selector: 'app-signup',
@@ -23,7 +23,7 @@ export class SignupComponent {
     birthYear: new FormControl('1990', Validators.required)
   })
 
-  constructor(private _http: HttpClient) {}
+  constructor(private userHttp: UserHttpService) {}
   
   get f(): { [key: string]: AbstractControl } {
     return this.signupForm.controls
@@ -55,10 +55,7 @@ export class SignupComponent {
     user.role = (formValues.role) as string
     user.birthYear = formValues.birthYear
 
-    this._http.post<any>(this.api + "users", user).subscribe({
-      next: (res) => console.log(res),
-      error: (err) => console.log(err)
-    })
+    this.userHttp.postUser(user);
   }
   
   /* 
