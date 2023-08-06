@@ -90,7 +90,7 @@ a {
     width: 75%;
     height: 75%;
     backface-visibility: hidden;
-    transition: 0.5s;
+    transition: 0.75s;
 
     background-image: url(assets/pics/A-Man-Lifting-Dumbell-Biceps.jpg);
     background-size: cover;

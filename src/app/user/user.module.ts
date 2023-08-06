@@ -6,6 +6,7 @@ import { UserComponent } from './user/user.component';
 import { TrainerInterfaceComponent } from './trainer-interface/trainer-interface.component';
 import { AthleteInterfaceComponent } from './athlete-interface/athlete-interface.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { UsernavbarComponent } from './usernavbar/usernavbar.component';
 
 
 
@@ -14,7 +15,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     UserComponent,
     TrainerInterfaceComponent,
     AthleteInterfaceComponent,
-    SidebarComponent
+    SidebarComponent,
+    UsernavbarComponent
   ],
   imports: [
     CommonModule,
