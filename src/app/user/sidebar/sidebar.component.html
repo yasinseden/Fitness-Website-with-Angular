@@ -1,16 +1,16 @@
-<mat-drawer-container class="d-flex" style="height: 92vh;">
+<mat-drawer-container class="d-flex" style="max-height: 92vh;">
     <mat-drawer #drawer mode="side" style="width: 260px; padding-top: 30px;">
         <mat-list>
             <ng-container *ngFor="let item of sidebarArr;">
-                <a href="#">
+                <button style="padding: 0; background: transparent; border: none;">
                     <mat-list-item style="padding-left: 15px; padding-right: 15px; cursor: pointer;">{{ item }}</mat-list-item>
-                </a>
+                </button>
                 <mat-divider></mat-divider>
             </ng-container>
         </mat-list>
     </mat-drawer>
     <mat-drawer-content>
-        <button mat-raised-button (click)="drawer.toggle()" (click)="toggleSidebarStatus()" style="position: fixed; top: 8vh; margin-left: 15px;">
+        <button mat-raised-button (click)="drawer.toggle()" (click)="toggleSidebarStatus()" style="position: fixed; top: 10vh; margin-left: 15px;">
             <mat-icon style="margin: 0;">menu</mat-icon>
         </button>
         <ng-content></ng-content>

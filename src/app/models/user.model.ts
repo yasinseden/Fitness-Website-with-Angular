@@ -1,3 +1,5 @@
+import { ExerciseModel } from "./exercise.model";
+
 export class UserModel {
     firstName: string = '';
     lastName: string = '';
@@ -7,6 +9,9 @@ export class UserModel {
     phoneNumber: string = '';
     role: string = '';
     birthYear: any | null = null;
+    profilePic: string = '';
+    exercises: ExerciseModel[] = [];
+    weightData: object[] = [];
 
     getAge(): any {
         const currentDate = new Date();

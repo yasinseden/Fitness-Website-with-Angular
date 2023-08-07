@@ -7,6 +7,7 @@ import { TrainerInterfaceComponent } from './trainer-interface/trainer-interface
 import { AthleteInterfaceComponent } from './athlete-interface/athlete-interface.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { UsernavbarComponent } from './usernavbar/usernavbar.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -22,6 +23,8 @@ import { UsernavbarComponent } from './usernavbar/usernavbar.component';
     CommonModule,
     MaterialModule,
     UserRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ]
 })
 export class UserModule { }

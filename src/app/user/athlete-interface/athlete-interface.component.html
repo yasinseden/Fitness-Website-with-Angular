@@ -1,11 +1,113 @@
-<div style="width: 100vw; height: 100vh; background-color: rgb(98, 98, 32);">
-    <div class="row">
-        <div class="d-flex justify-content-center" style="height: 100vh; padding-top: 3%; padding-left: 13vh; padding-right: 13vh;" [ngClass]="columnClass">
-            <div style="height: 36vw; width: 35%; background-color: aqua; border-radius: 2vw;">
-
+<div style="width: 100vw; height: 100vh; background-color: transparent">
+    <div class="row mt-2">
+        <div class="d-flex justify-content-center " style="height: 100vh; padding-top: 3%;" [ngClass]="columnClass">
+            <div style="height: 38vw; width: 375px; border: 1px solid black; border-radius: 2vw; overflow: hidden;">
+                <!-- User Info Update Form Field -->
+                <div [ngClass]="toggleClass" *ngIf="!divSelection" class="user-id-card">
+                    <form [formGroup]="userInfoUpdate" class="p-4">
+                        <div class="my-form-field">
+                            <label for="weight" style="margin-bottom: 0.2rem;">Weight (KG)</label>
+                            <input formControlName="weight" type="text"id="weight" class="my-input" placeholder="85">
+                        </div>
+                        <div class="my-form-field">
+                            <label for="height" style="margin-bottom: 0.2rem;">Height (CM)</label>
+                            <input formControlName="height" type="text"id="height" class="my-input" placeholder="180">
+                        </div>
+                        <div class="my-form-field">
+                            <label for="targetWeight" style="margin-bottom: 0.2rem;">Target Weight (KG)</label>
+                            <input formControlName="targetWeight" type="text"id="targetWeight" class="my-input" placeholder="70">
+                        </div>
+                        <div class="my-form-field">
+                            <label for="neck" style="margin-bottom: 0.2rem;">Neck (CM)</label>
+                            <input formControlName="neck" type="text" id="neck" class="my-input" placeholder="40">
+                        </div>
+                        <div class="my-form-field">
+                            <label for="waist" style="margin-bottom: 0.2rem;">Waist (CM)</label>
+                            <input formControlName="waist" type="text" id="waist" class="my-input" placeholder="85">
+                        </div>
+                        <div class="my-form-field">
+                            <label for="hips" style="margin-bottom: 0.2rem;">Hips (KG)</label>
+                            <input formControlName="hips" type="text" id="hips" class="my-input" placeholder="90">
+                        </div>
+                        <div class="my-form-field" style="flex-direction: row;">
+                            <div class="w-50 d-flex flex-column align-items-center">
+                                <label for="male" style="margin-bottom: 0.2rem;">Male</label>
+                                <input formControlName="gender" type="radio" id="gender" value="male" class="my-input">
+                            </div>
+                            <div class="w-50 d-flex flex-column align-items-center">
+                                <label for="female" style="margin-bottom: 0.2rem;">Female</label>
+                                <input formControlName="gender" type="radio" id="gender" value="female" class="my-input">
+                            </div>
+                        </div>
+                        <div class="my-form-field">
+                            <button style="width: 100%; height: 2.5rem; background: transparent; border: none; color: white;">
+                                UPDATE
+                            </button>
+                        </div>
+                    </form>
+                    <div class="d-flex justify-content-center align-items-center"
+                        style="border-radius: 0 0 2vw 2vw; height: 10%; border-top: 1px solid black; margin-top: -1em;">
+                        <button (click)="changeUserCard()"
+                            style="padding: 0; width: 100%; height: 100%; background: transparent; border: none; color: white;">
+                            <i class="fa-solid fa-circle-right fa-rotate-180"></i>
+                            TURN BACK
+                        </button>
+                    </div>
+                </div>
+                <!-- User Id Card Field -->
+                <div [ngClass]="toggleClass" *ngIf="divSelection" class="user-id-card">
+                    <div class="d-flex align-items-center "
+                        style="width: 100%; height: 35%; border-radius: 2vw 2vw 0 0; padding-left: 1rem;">
+                        <div class="d-flex justify-content-center align-items-center h-75"
+                            style="border: 2.5px solid black; border-radius: 2vw; width: 35%; overflow: hidden;">
+                            <img src="assets\pics\Gorilla-With-Dumbbell.jpg" alt="" style="width: auto; height: 100%;">
+                        </div>
+                        <div style="margin-left: 2rem; font-size: 25px;">
+                            <b>USER NAME</b>
+                        </div>
+                    </div>
+                    <div style="height: 55%; width: 100%;">
+                        <table class="w-100">
+                            <!-- Make it better. it's just a placeholder for now -->
+                            <tr class="w-100" style="text-align: center; border-top: 1px solid black;">
+                                <td class="w-50 p-3">Height</td>
+                                <td class="w-50 p-3">175 cm</td>
+                            </tr>
+                            <tr class="w-100" style="text-align: center; border-top: 1px solid black;">
+                                <td class="w-50 p-3">Weight</td>
+                                <td class="w-50 p-3">75 kg</td>
+                            </tr>
+                            <tr class="w-100" style="text-align: center; border-top: 1px solid black;">
+                                <td class="w-50 p-3">Height</td>
+                                <td class="w-50 p-3">175 cm</td>
+                            </tr>
+                            <tr class="w-100" style="text-align: center; border-top: 1px solid black;">
+                                <td class="w-50 p-3">Weight</td>
+                                <td class="w-50 p-3">75 kg</td>
+                            </tr>
+                            <tr class="w-100" style="text-align: center; border-top: 1px solid black;">
+                                <td class="w-50 p-3">Height</td>
+                                <td class="w-50 p-3">175 cm</td>
+                            </tr>
+                            <tr class="w-100" style="text-align: center; border-top: 1px solid black;">
+                                <td class="w-50 p-3">Weight</td>
+                                <td class="w-50 p-3">75 kg</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center"
+                        style="border-radius: 0 0 2vw 2vw; height: 10%; border-top: 1px solid black;">
+                        <button (click)="changeUserCard()"
+                            style="padding: 0; width: 100%; height: 100%; background: transparent; border: none; color: white;">
+                            UPDATE YOUR INFO
+                            <i class="fa-solid fa-circle-right"></i>
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div style="height: 20vw; width: 55%; background-color: blueviolet; border-radius: 2vw; margin-left: 5vw;">
-
+            <!-- User Info Tracking Graph Field -->
+            <div
+                style="height: 25vw; width: 775px; background-color: blueviolet; border-radius: 2vw; margin-left: 5vw;">
             </div>
         </div>
     </div>

@@ -9,6 +9,9 @@
       "phoneNumber": "5778962521",
       "role": "admin",
       "birthYear": 1996,
+      "profilePic": "",
+      "exercises": [],
+      "weightData": [],
       "id": 1
     },
     {
@@ -20,6 +23,9 @@
       "phoneNumber": "5468454862",
       "role": "user",
       "birthYear": 1991,
+      "profilePic": "",
+      "exercises": [],
+      "weightData": [],
       "id": 2
     },
     {
@@ -31,6 +37,9 @@
       "phoneNumber": "5468454862",
       "role": "user",
       "birthYear": 2001,
+      "profilePic": "",
+      "exercises": [],
+      "weightData": [],
       "id": 3
     },
     {
@@ -42,6 +51,9 @@
       "phoneNumber": "5468454862",
       "role": "user",
       "birthYear": 2004,
+      "profilePic": "",
+      "exercises": [],
+      "weightData": [],
       "id": 4
     },
     {
@@ -53,6 +65,9 @@
       "phoneNumber": "5468454862",
       "role": "admin",
       "birthYear": 1997,
+      "profilePic": "",
+      "exercises": [],
+      "weightData": [],
       "id": 5
     },
     {
@@ -64,6 +79,9 @@
       "phoneNumber": "5778962521",
       "role": "user",
       "birthYear": 2002,
+      "profilePic": "",
+      "exercises": [],
+      "weightData": [],
       "id": 6
     },
     {
@@ -75,6 +93,9 @@
       "phoneNumber": "5778962521",
       "role": "admin",
       "birthYear": 1995,
+      "profilePic": "",
+      "exercises": [],
+      "weightData": [],
       "id": 7
     },
     {
@@ -86,7 +107,24 @@
       "phoneNumber": "5778962521",
       "role": "admin",
       "birthYear": "1990",
+      "profilePic": "",
+      "exercises": [],
+      "weightData": [],
       "id": 8
+    },
+    {
+      "firstName": "Kazım",
+      "lastName": "Kömür",
+      "userName": "kazım",
+      "email": "kazim@fitmind.com",
+      "password": "12345678",
+      "phoneNumber": "5778962521",
+      "role": "user",
+      "birthYear": 2000,
+      "profilePic": "",
+      "exercises": [],
+      "weightData": [],
+      "id": 9
     }
   ],
   "exercises": []

@@ -1,15 +1,23 @@
-<div class="d-flex align-items-center justify-content-between" style="background-color: white; height: 8vh;">
+<div class="d-flex align-items-center justify-content-between" style="background-color: rgb(122, 122, 122); height: 8vh;">
         <button style="border: none; background: transparent;" routerLink="/">
-            <div class="skewed p-1" style="display: inline-block; border: 1px solid red; margin-left: 1rem; margin-bottom: 0.5rem;">
+            <div class="skewed p-1" style="display: inline-block; margin-left: 1rem; margin-bottom: 0.5rem; background-color: white;">
                 <img src="assets\pics\logo-removebg-preview.png" height="25px" alt="" class="unskewed">
             </div>
         </button>
-        <div class="d-flex align-items-center">
+        <div class="d-flex align-items-center" style="border-radius: 50px; margin-right: 1vw; padding: 2px 0 2px 1rem; background-color: white;">
             <div>
                 User Name
             </div>
-                <button style="height: 40px; width: 40px; background: transparent; border: none; border-radius: 50%; overflow: hidden; margin-right: 2vw; margin-left: 1rem; padding: 0;">
-                    <img src="assets\pics\Gorilla-With-Dumbbell.jpg" alt="" style="height: 40px; width: 40px;">
+                <button mat-button [matMenuTriggerFor]="belowMenu" style="height: 40px; width: 40px; background: transparent; padding: 0;">
+                    <div style="border: 1px solid red; border-radius: 50%; overflow: hidden; position: relative; left: 23%;">
+                        <img src="assets\pics\Gorilla-With-Dumbbell.jpg" alt="" style="height: 40px; width: 40px;">
+                    </div>
+                    <mat-menu #belowMenu="matMenu" yPosition="below">
+                        <ng-container *ngFor="let menu of userMenuList">
+                            <button mat-menu-item>{{ menu }}</button>
+                        </ng-container>
+                        
+                      </mat-menu>
                 </button>
         </div>
 </div>
