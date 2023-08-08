@@ -43,6 +43,9 @@ export class LoginComponent {
       console.log('USER COULD NOT FIND');
       console.log(validation);
     }
+
+    this.auth.setEmail(this.userNameEmail);
+    this.auth.setPassword(this.password);
   }
 
 

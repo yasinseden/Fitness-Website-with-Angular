@@ -63,35 +63,35 @@
                             <img src="assets\pics\Gorilla-With-Dumbbell.jpg" alt="" style="width: auto; height: 100%;">
                         </div>
                         <div style="margin-left: 2rem; font-size: 25px;">
-                            <b>USER NAME</b>
+                            <b>{{ userData.userName }}</b>
                         </div>
                     </div>
                     <div style="height: 55%; width: 100%;">
                         <table class="w-100">
                             <!-- Make it better. it's just a placeholder for now -->
                             <tr class="w-100" style="text-align: center; border-top: 1px solid black;">
-                                <td class="w-50 p-3">Height</td>
-                                <td class="w-50 p-3">175 cm</td>
-                            </tr>
-                            <tr class="w-100" style="text-align: center; border-top: 1px solid black;">
                                 <td class="w-50 p-3">Weight</td>
-                                <td class="w-50 p-3">75 kg</td>
+                                <td class="w-50 p-3">98</td>
                             </tr>
                             <tr class="w-100" style="text-align: center; border-top: 1px solid black;">
                                 <td class="w-50 p-3">Height</td>
-                                <td class="w-50 p-3">175 cm</td>
+                                <td class="w-50 p-3">{{ userData.bodyMeasurement.height }}</td>
                             </tr>
                             <tr class="w-100" style="text-align: center; border-top: 1px solid black;">
-                                <td class="w-50 p-3">Weight</td>
-                                <td class="w-50 p-3">75 kg</td>
+                                <td class="w-50 p-3">Target Weight</td>
+                                <td class="w-50 p-3">{{ userData.bodyMeasurement.targetWeight }}</td>
                             </tr>
                             <tr class="w-100" style="text-align: center; border-top: 1px solid black;">
-                                <td class="w-50 p-3">Height</td>
-                                <td class="w-50 p-3">175 cm</td>
+                                <td class="w-50 p-3">Neck</td>
+                                <td class="w-50 p-3">{{ userData.bodyMeasurement.neck }}</td>
                             </tr>
                             <tr class="w-100" style="text-align: center; border-top: 1px solid black;">
-                                <td class="w-50 p-3">Weight</td>
-                                <td class="w-50 p-3">75 kg</td>
+                                <td class="w-50 p-3">Waist</td>
+                                <td class="w-50 p-3">{{ userData.bodyMeasurement.waist }}</td>
+                            </tr>
+                            <tr class="w-100" style="text-align: center; border-top: 1px solid black;">
+                                <td class="w-50 p-3">Hips</td>
+                                <td class="w-50 p-3">{{ userData.bodyMeasurement.hips }}</td>
                             </tr>
                         </table>
                     </div>

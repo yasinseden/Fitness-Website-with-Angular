@@ -11,7 +11,14 @@
       "birthYear": 1996,
       "profilePic": "",
       "exercises": [],
-      "weightData": [],
+      "bodyMeasurement": {
+        "weight": [],
+        "height": "",
+        "targetWeigth": "",
+        "neck": "",
+        "waist": "",
+        "hips": ""
+      },
       "id": 1
     },
     {
@@ -25,7 +32,14 @@
       "birthYear": 1991,
       "profilePic": "",
       "exercises": [],
-      "weightData": [],
+      "bodyMeasurement": {
+        "weight": [],
+        "height": "182",
+        "targetWeight": "85",
+        "neck": "41",
+        "waist": "89",
+        "hips": ""
+      },
       "id": 2
     },
     {
@@ -39,7 +53,14 @@
       "birthYear": 2001,
       "profilePic": "",
       "exercises": [],
-      "weightData": [],
+      "bodyMeasurement": {
+        "weight": [],
+        "height": "",
+        "targetWeight": "",
+        "neck": "",
+        "waist": "",
+        "hips": ""
+      },
       "id": 3
     },
     {
@@ -53,7 +74,14 @@
       "birthYear": 2004,
       "profilePic": "",
       "exercises": [],
-      "weightData": [],
+      "bodyMeasurement": {
+        "weight": [],
+        "height": "",
+        "targetWeight": "",
+        "neck": "",
+        "waist": "",
+        "hips": ""
+      },
       "id": 4
     },
     {
@@ -67,7 +95,14 @@
       "birthYear": 1997,
       "profilePic": "",
       "exercises": [],
-      "weightData": [],
+      "bodyMeasurement": {
+        "weight": [],
+        "height": "",
+        "targetWeight": "",
+        "neck": "",
+        "waist": "",
+        "hips": ""
+      },
       "id": 5
     },
     {
@@ -81,7 +116,14 @@
       "birthYear": 2002,
       "profilePic": "",
       "exercises": [],
-      "weightData": [],
+      "bodyMeasurement": {
+        "weight": [],
+        "height": "",
+        "targetWeight": "",
+        "neck": "",
+        "waist": "",
+        "hips": ""
+      },
       "id": 6
     },
     {
@@ -95,7 +137,14 @@
       "birthYear": 1995,
       "profilePic": "",
       "exercises": [],
-      "weightData": [],
+      "bodyMeasurement": {
+        "weight": [],
+        "height": "",
+        "targetWeight": "",
+        "neck": "",
+        "waist": "",
+        "hips": ""
+      },
       "id": 7
     },
     {
@@ -109,7 +158,14 @@
       "birthYear": "1990",
       "profilePic": "",
       "exercises": [],
-      "weightData": [],
+      "bodyMeasurement": {
+        "weight": [],
+        "height": "",
+        "targetWeight": "",
+        "neck": "",
+        "waist": "",
+        "hips": ""
+      },
       "id": 8
     },
     {
@@ -123,8 +179,57 @@
       "birthYear": 2000,
       "profilePic": "",
       "exercises": [],
-      "weightData": [],
+      "bodyMeasurement": {
+        "weight": [],
+        "height": "",
+        "targetWeight": "",
+        "neck": "",
+        "waist": "",
+        "hips": ""
+      },
       "id": 9
+    },
+    {
+      "firstName": "Berke",
+      "lastName": "Cengiz",
+      "userName": "berke",
+      "email": "berke@fitmind.com",
+      "password": "12345678",
+      "phoneNumber": "5487952154",
+      "role": "user",
+      "birthYear": 2001,
+      "profilePic": "",
+      "exercises": [],
+      "bodyMeasurement": {
+        "weight": [],
+        "height": "",
+        "targetWeight": "",
+        "neck": "",
+        "waist": "",
+        "hips": ""
+      },
+      "id": 10
+    },
+    {
+      "firstName": "Melih",
+      "lastName": "Yemen",
+      "userName": "melih",
+      "email": "melih@fitmind.com",
+      "password": "12345678",
+      "phoneNumber": "5778962521",
+      "role": "user",
+      "birthYear": 1985,
+      "profilePic": "",
+      "exercises": [],
+      "bodyMeasurement": {
+        "weight": [],
+        "height": "",
+        "targetWeight": "",
+        "neck": "",
+        "waist": "",
+        "hips": ""
+      },
+      "id": 11
     }
   ],
   "exercises": []

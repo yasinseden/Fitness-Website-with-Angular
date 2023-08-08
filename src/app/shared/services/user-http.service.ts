@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { UserModel } from 'src/app/models/user.model';
 
 @Injectable({
@@ -11,6 +12,11 @@ export class UserHttpService {
   users: UserModel[] = [];
 
   constructor(private _http: HttpClient) {}
+
+  getUserByEmailAndPassword(email: string, password: string): Observable<any> {
+    const queryParams = `?email=${email}&password=${password}`;
+    return this._http.get<any>(`${this.api}users${queryParams}`)
+  }
 
   getUsers() {
     this._http.get<any>(this.api + "users").subscribe({

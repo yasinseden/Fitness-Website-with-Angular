@@ -1,3 +1,4 @@
+import { BodyMeasurementsModel } from "./body-measurements.mode";
 import { ExerciseModel } from "./exercise.model";
 
 export class UserModel {
@@ -11,7 +12,7 @@ export class UserModel {
     birthYear: any | null = null;
     profilePic: string = '';
     exercises: ExerciseModel[] = [];
-    weightData: object[] = [];
+    bodyMeasurement: BodyMeasurementsModel = new BodyMeasurementsModel;
 
     getAge(): any {
         const currentDate = new Date();

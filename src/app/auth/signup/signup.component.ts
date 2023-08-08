@@ -13,14 +13,14 @@ export class SignupComponent {
   api: string = "http://localhost:3000/"
 
   signupForm = new FormGroup({
-    userName: new FormControl('ashil', Validators.required),
+    userName: new FormControl('', Validators.required),
     password: new FormControl('12345678', [Validators.required, Validators.minLength(8)]),
-    firstName: new FormControl('Yasin', Validators.required),
-    lastName: new FormControl('Seden', Validators.required),
-    email: new FormControl('yasin@yasin.com', [Validators.required, Validators.email]),
+    firstName: new FormControl('', Validators.required),
+    lastName: new FormControl('', Validators.required),
+    email: new FormControl('@fitmind.com', [Validators.required, Validators.email]),
     phoneNumber: new FormControl('5778962521', [Validators.required, Validators.maxLength(10)]), // Learn how to lock when input length become maxLength
-    role: new FormControl('admin', Validators.required),
-    birthYear: new FormControl('1990', Validators.required)
+    role: new FormControl('', Validators.required),
+    birthYear: new FormControl('', Validators.required)
   })
 
   constructor(private userHttp: UserHttpService) {}
