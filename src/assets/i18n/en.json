@@ -1,18 +1,24 @@
 {
     "exercises":"Exercises",
-    "Learn":"Learn",
-    "About":"About",
+    "learn":"Learn",
+    "about":"About",
     "userEntrance":"GET STARTED",
     "mainPageMainHeader": "GET BODY IN SAHAPE & STAY HEALTY",
     "dailyUpdate":"GET DAILY UPDATES",
+
     "mainPageSecondHeader": "Our Mission Is To Empower People Who Want To Be Fit",
     "mainPageThirdHeader": "Start With Learning About Exercises",
     "mainPageForthHeader": "Watch Out Workout Tips",
     "mainPageFifthHeader": "Exercises That Target Certain Muscles",
     "mainPageSixthHeader": "Get Daily Schedule For Workouts",
+
+    "startPracticing": "START PRACTICING",
+    "viewExercises": "VİEW ALL EXERCİSES",
     "readMore": "READ MORE",
+    
     "enterEmail": "Enter Your Email",
     "subscribe": "Subscribe",
+    
     "quickLinks": "QUICK LINKS",
     "aboutUs": "About Us",
     "muscularGroups": "Muscular Groups",
@@ -27,20 +33,38 @@
     "followUs": "FOLLOW US",
     "copyrights": "Copyrights",
     "allRights": "All rights reserved",
+    
     "alreadyUser": "I AM ALREADY ONE OF YOU",
     "newUser": "I WOULD LIKE TO BE ONE OF YOU",
     "welcomeBack": "WELCOME BACK",
     "welcomeNew": "WELCOME YOU ARE NEW HERE",
+
+    "email": "E-mail",
+    "name": "First Name",
+    "lastname": "Last Name",
+    "phone": "Phone Number",
+    "role": "Select Role",
+       "admin": "Admin",
+       "user": "User",
+    "birthYear": "Birth Year",
+    "usernameLabel": "Username",
+    "usernameEmailLabel": "Username or E-mail",
+    "emailPlaceholder": "example@example.com",
+    "passwordLabel": "Password",
+
     "usernameBlankError": "Username field cannot be left blank",
     "passwordBlankError": "Password field cannot be left blank",
+    "passwordLengthError": "Password must be at least 8 chracters long",
     "firstnameBlankError": "First name field cannot be left blank",
     "lastnameBlankError": "Last name field cannot be left blank",
     "emailBlankError": "E-mail field cannot be left blank",
     "emailFormatError": "E-mail field must be in e-mail format",
+    
     "signup": "Sign Up",
     "login": "Log In",
     "haveAccount": "Already Have An Account?",
     "forgotPassword": "Forgot Password",
+    
     "weight": "Weight",
     "height": "Height",
     "targetWeight": "Target Weight",
@@ -54,6 +78,7 @@
     "genderFemale": "Female",
     "updateButton": "UPDATE",
     "turnbackButton": "TURN BACK",
+    
     "profile": "Profile",
     "settings": "Settings",
     "logout": "Log Out"

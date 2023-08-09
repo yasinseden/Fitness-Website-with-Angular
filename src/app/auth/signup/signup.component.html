@@ -17,102 +17,93 @@
                             </div>
                         </div>
                         <div class="col-9">
-                            <h2 style="margin: 0; font-size: 30px; color: rgba(24,23,20,255);"><b>WELCOME YOU'RE NEW
-                                    HERE</b></h2>
+                            <h2 style="margin: 0; font-size: 30px; color: rgba(24,23,20,255);"><b>{{ 'welcomeNew' | translate }}</b></h2>
                         </div>
                     </div>
                     <form class="mt-4 signup-form" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
                         <!-- Signup Form username field -->
                         <mat-form-field class="w-48 mt-3" appearance="outline">
-                            <mat-label>Username</mat-label>
-                            <input type="text" matInput formControlName="userName" placeholder="username">
+                            <mat-label>{{ 'usernameLabel' | translate }}</mat-label>
+                            <input type="text" matInput formControlName="userName" placeholder="{{ 'usernameLabel' | translate }}">
                             <mat-error class="d-flex align-items-start">
-                                <p *ngIf="f['password'].errors && f['password'].errors['required']">Username
-                                    field can not be left blank
+                                <p *ngIf="f['password'].errors && f['password'].errors['required']">{{ 'usernameBlankError' | translate }}
                                 </p>
                             </mat-error>
                             <mat-icon matPrefix>person</mat-icon>
                         </mat-form-field>
                         <!-- Signup Form password field -->
                         <mat-form-field class="w-48 mt-3 form-field-margin" appearance="outline">
-                            <mat-label>Password</mat-label>
+                            <mat-label>{{ 'passwordLabel' | translate }}</mat-label>
                             <input type="password" matInput formControlName="password">
                             <mat-error class="d-flex align-items-start">
-                                <p *ngIf="f['password'].errors && f['password'].errors['required']">Password
-                                    field can not be left blank
+                                <p *ngIf="f['password'].errors && f['password'].errors['required']">{{ 'passwordBlankError' | translate }}
                                 </p>
-                                <p *ngIf="f['password'].errors && f['password'].errors['minlength']">Password
-                                    must be at least 8 characters long
+                                <p *ngIf="f['password'].errors && f['password'].errors['minlength']">{{ 'passwordLengthError' | translate }}
                                 </p>
                             </mat-error>
                             <mat-icon matPrefix>key</mat-icon>
                         </mat-form-field>
                         <!-- Signup Form first name field -->
                         <mat-form-field class="w-48 mt-3" appearance="outline">
-                            <mat-label>First Name</mat-label>
-                            <input type="text" matInput formControlName="firstName" placeholder="First Name">
+                            <mat-label>{{ 'name' | translate }}</mat-label>
+                            <input type="text" matInput formControlName="firstName" placeholder="{{ 'name' | translate }}">
                             <mat-error class="d-flex align-items-start">
-                                <p *ngIf="f['password'].errors && f['password'].errors['required']">First name
-                                    field can not be left blank
+                                <p *ngIf="f['password'].errors && f['password'].errors['required']">{{ 'firstnameBlankError' | translate }}
                                 </p>
                             </mat-error>
                             <mat-icon matPrefix>assignment_ind</mat-icon>
                         </mat-form-field>
                         <!-- Signup Form last name field -->
                         <mat-form-field class="w-48 mt-3 form-field-margin" appearance="outline">
-                            <mat-label>Last Name</mat-label>
-                            <input type="text" matInput formControlName="lastName" placeholder="Last Name">
+                            <mat-label>{{ 'lastname' | translate }}</mat-label>
+                            <input type="text" matInput formControlName="lastName" placeholder="{{ 'lastname' | translate }}">
                             <mat-error class="d-flex align-items-start">
-                                <p *ngIf="f['password'].errors && f['password'].errors['required']">Last name
-                                    field can not be left blank
+                                <p *ngIf="f['password'].errors && f['password'].errors['required']">{{ 'lastnameBlankError' | translate }}
                                 </p>
                             </mat-error>
                             <mat-icon matPrefix>assignment_ind</mat-icon>
                         </mat-form-field>
                         <!-- Signup Form email field -->
                         <mat-form-field class="w-48 mt-3" appearance="outline">
-                            <mat-label>Email</mat-label>
-                            <input type="email" matInput formControlName="email" placeholder="example@example.com">
+                            <mat-label>{{ 'email' | translate }}</mat-label>
+                            <input type="email" matInput formControlName="email" placeholder="{{ 'emailPlaceholder' | translate }}">
                             <mat-error class="d-flex align-items-start">
-                                <p *ngIf="f['email'].errors && f['email'].errors['required']">E-mail field can
-                                    not be left blank
+                                <p *ngIf="f['email'].errors && f['email'].errors['required']">{{ 'emailBlankError' | translate }}
                                 </p>
-                                <p *ngIf="f['email'].errors && f['email'].errors['email']">E-mail field must be in
-                                    e-mail format
+                                <p *ngIf="f['email'].errors && f['email'].errors['email']">{{ 'emailFormatError' | translate }}
                                 </p>
                             </mat-error>
                             <mat-icon matPrefix>mail</mat-icon>
                         </mat-form-field>
                         <!-- Signup Form phone number field -->
                         <mat-form-field class="w-48 mt-3 form-field-margin" appearance="outline">
-                            <mat-label>Phone Number</mat-label>
+                            <mat-label>{{ 'phone' | translate }}</mat-label>
                             <input type="tel" matInput formControlName="phoneNumber" placeholder="5xx xxx xxxx">
                             <mat-icon matPrefix>phone</mat-icon>
                         </mat-form-field>
                         <!-- Signup Form role selection field -->
                         <mat-form-field class="w-48 mt-3" style="min-width: 248px;" appearance="outline">
-                            <mat-label>Select Role</mat-label>
+                            <mat-label>{{ 'role' | translate }}</mat-label>
                             <mat-select formControlName="role" disableRipple>
-                                <mat-option value="admin">Admin</mat-option>
-                                <mat-option value="user">User</mat-option>
+                                <mat-option value="admin">{{ 'admin' | translate }}</mat-option>
+                                <mat-option value="user">{{ 'user' | translate }}</mat-option>
                             </mat-select>
                         </mat-form-field>
                         <!-- Signup Form birth year selection field -->
                         <mat-form-field class="w-48 mt-3 form-field-margin" style="min-width: 248px;"
                             appearance="outline">
-                            <mat-label>Birth Year</mat-label>
+                            <mat-label>{{ 'birthYear' | translate }}</mat-label>
                             <mat-select formControlName="birthYear" disableRipple>
                                 <mat-option *ngFor="let year of getYearsRange()" [value]="year">{{ year }}</mat-option>
                             </mat-select>
                         </mat-form-field>
                         <!-- Login Form Buttons and links -->
                         <div class="d-flex justify-content-between align-items-center pt-3">
-                            <button [disabled]="signupForm.invalid" mat-raised-button class="mb-3 mt-3"><span>Sign
-                                    Up</span>
+                            <button [disabled]="signupForm.invalid" mat-raised-button class="mb-3 mt-3"><span>{{ 'signup' | translate }}</span>
                             </button>
                             <div class="d-flex" style="padding-right: 7em; color: rgba(177, 177, 177, 255);">
-                                <p>Already Have An Account?</p>
-                                <a href="/auth/login" class="signup-link"><span>Log In</span></a>
+                                <p>{{ 'haveAccount' | translate }}</p>
+                                <a href="/auth/login" class="signup-link"><span>{{ 'login' | translate }}</span></a>
                             </div>
                         </div>
                     </form>

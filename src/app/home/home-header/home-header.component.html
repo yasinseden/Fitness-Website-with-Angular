@@ -1,29 +1,30 @@
 <div>
-    <div id="navbar"
-        style="width: 100%; padding-left: 10vw; padding-right: 10vw; margin-top: 2vh; position: relative; z-index: 1; top: 1vh;">
-        <div class="d-flex justify-content-between align-items-center">
-            <div class="skewed p-1" style="display: inline-block; border: 1px solid red; margin-left: 1rem; margin-bottom: 0.5rem;">
+    <div id="navbar" class="d-flex"
+        style="width: 100%; padding-left: 2vw; padding-right: 10vw; position: relative; z-index: 1; top: 1vh;">
+        <app-language></app-language>
+        <div class="d-flex justify-content-between align-items-center flex-grow-1">
+            <div class="skewed p-1" style="display: inline-block; border: 1px solid red; margin-bottom: 0.5rem;">
                 <img src="assets\pics\logo-removebg-preview.png" height="25px" alt="" class="unskewed">
             </div>
-            <div id="navbar-icons" class="d-flex justify-content-between" style="margin-top: 6px;">
+            <div id="navbar-icons" class="d-flex justify-content-between" style="margin-top: 6px; margin-right: 6vw;">
                 <div class="d-flex flex-column align-items-center">
                     <i class="fa-solid fa-dumbbell fa-lg" style="color: #ff0000; margin: auto;"></i>
-                    <p style="margin: 10px 0 0;">Exercises</p>
+                    <p style="margin: 10px 0 0;">{{ 'exercises' | translate }}</p>
                 </div>
                 <div class="d-flex flex-column align-items-center" style="margin-left: 18vh;">
                     <i class="fa-solid fa-graduation-cap fa-lg" style="color: #ff0000; margin: auto;"></i>
-                    <p style="margin: 10px 0 0;">Learn</p>
+                    <p style="margin: 10px 0 0;">{{ 'learn' | translate }}</p>
                 </div>
                 <div class="d-flex flex-column align-items-center" style="margin-left: 18vh;">
                     <i class="fa-solid fa-circle-info fa-lg" style="color: #ff0000; margin: auto;"></i>
-                    <p style="margin: 10px 0 0;">About</p>
+                    <p style="margin: 10px 0 0;">{{ 'about' | translate }}</p>
                 </div>
             </div>
-            <div>
+            <div style="width: 128.5px;">
                 <button
                     style="display: flex; justify-content: center; align-items: center; background-color: rgb(255, 0, 0, 0.7); padding: 5px; color: white; border: none;"
                     class="skewed" routerLink="/auth">
-                    <p class="unskewed" style="margin: 1px 5px;">GET STARTED</p>
+                    <p class="unskewed" style="margin: 1px 5px;">{{ 'userEntrance' | translate }}</p>
                     <i class="fa-solid fa-angles-right fa-xs unskewed"></i>
                 </button>
             </div>
@@ -35,7 +36,7 @@
             <div
                 style="display: flex; justify-content: center; align-items: center; font-size: 55px; text-align: start; width: 75%; padding-left: 50px; line-height: 100%; line-clamp: 3;">
                 <p>
-                    <b>GET BODY IN SHAPE & STAY HEALTHY</b>
+                    <b>{{ 'mainPageMainHeader' | translate }}</b>
                 </p>
             </div>
         </div>
@@ -61,7 +62,7 @@
         <button
             style="display: flex; justify-content: center; align-items: center; background-color: rgb(255, 0, 0, 0.7); padding: 5px; color: inherit; border: none;"
             class="skewed">
-            <p class="unskewed" style="margin: 1px 5px;">Get Daily Updates</p>
+            <p class="unskewed" style="margin: 1px 5px;">{{ 'dailyUpdate' | translate }}</p>
             <i class="fa-solid fa-angles-right fa-xs unskewed"></i>
         </button>
     </div>

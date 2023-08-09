@@ -8,6 +8,7 @@ import { AthleteInterfaceComponent } from './athlete-interface/athlete-interface
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { UsernavbarComponent } from './usernavbar/usernavbar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -25,6 +26,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     UserRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    SharedModule,
   ]
 })
 export class UserModule { }

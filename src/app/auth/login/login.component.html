@@ -3,7 +3,7 @@
     <div class="container" style="height: 100vh;">
         <div class="row h-100">
             <div class="col-5">
-                
+
             </div>
             <div class="col-7 d-flex align-items-center h-100">
                 <!-- LoginForm container -->
@@ -17,43 +17,43 @@
                             </div>
                         </div>
                         <div class="col-9">
-                            <h2 style="margin: 0; font-size: 30px; color: rgba(24,23,20,255);"><b>WELCOME BACK</b></h2>
+                            <h2 style="margin: 0; font-size: 30px; color: rgba(24,23,20,255);"><b>{{ 'welcomeBack' |
+                                    translate }}</b></h2>
                         </div>
                     </div>
                     <form class="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
                         <!-- Login Form username field -->
                         <mat-form-field class="w-100 pt-4" appearance="outline">
-                            <mat-label>Username or Email</mat-label>
+                            <mat-label>{{ 'usernameEmailLabel' | translate }}</mat-label>
                             <input type="email" matInput formControlName="email" placeholder="example@example.com">
                             <mat-error class="d-flex align-items-start">
-                                <p *ngIf="f['email'].errors && f['email'].errors['required']">E-mail field can
-                                    not be left blank
+                                <p *ngIf="f['email'].errors && f['email'].errors['required']">{{ 'emailBlankError' |
+                                    translate }}
                                 </p>
-                                <p *ngIf="f['email'].errors && f['email'].errors['email']">E-mail field must be in
-                                    e-mail format
+                                <p *ngIf="f['email'].errors && f['email'].errors['email']">{{ 'emailFormatError' |
+                                    translate }}
                                 </p>
                             </mat-error>
                             <mat-icon matPrefix>person</mat-icon>
                         </mat-form-field>
                         <!-- Login Form password field -->
                         <mat-form-field class="w-100 pt-4" appearance="outline">
-                            <mat-label>Password</mat-label>
+                            <mat-label>{{ 'passwordLabel' | translate}}</mat-label>
                             <input type="password" matInput formControlName="password">
                             <mat-error class="d-flex align-items-start">
-                                <p *ngIf="f['password'].errors && f['password'].errors['required']">Password
-                                    field can not be left blank
+                                <p *ngIf="f['password'].errors && f['password'].errors['required']">{{
+                                    'passwordBlankError' | translate }}
                                 </p>
                             </mat-error>
                             <mat-icon matPrefix>key</mat-icon>
                         </mat-form-field>
                         <!-- Login Form Buttons and links -->
                         <div class="d-flex justify-content-between align-items-center pt-3">
-                            <button [disabled]="loginForm.invalid" mat-raised-button class="mb-3 mt-3"><span>Log
-                                    in</span>
+                            <button [disabled]="loginForm.invalid" mat-raised-button class="mb-3 mt-3"><span>{{ 'login' | translate }}</span>
                             </button>
                             <div style="padding-right: 7em; color: rgba(177, 177, 177, 255);">
-                                <a href="/auth" class="login-link"><span>Forgot Password</span></a>
-                                <a href="/auth/signup" class="login-link"><span>Sign Up</span></a>
+                                <a href="/auth" class="login-link"><span>{{ 'forgotPassword' | translate }}</span></a>
+                                <a href="/auth/signup" class="login-link"><span>{{ 'signup' | translate }}</span></a>
                             </div>
                         </div>
                     </form>

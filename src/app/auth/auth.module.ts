@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { SelectionComponent } from './selection/selection.component';
 import { SignupComponent } from './signup/signup.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -25,6 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    SharedModule,
   ]
 })
 export class AuthModule { }

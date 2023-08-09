@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeBodyComponent } from './home-body/home-body.component';
 import { MaterialModule } from '../shared/material/material.module';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { MaterialModule } from '../shared/material/material.module';
     CommonModule,
     HomeRoutingModule,
     MaterialModule,
+    SharedModule,
   ]
 })
 export class HomeModule { }

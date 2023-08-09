@@ -6,42 +6,42 @@
                 <div [ngClass]="toggleClass" *ngIf="!divSelection" class="user-id-card">
                     <form [formGroup]="userInfoUpdate" class="p-4">
                         <div class="my-form-field">
-                            <label for="weight" style="margin-bottom: 0.2rem;">Weight (KG)</label>
+                            <label for="weight" style="margin-bottom: 0.2rem;">{{ 'weight' | translate }} ({{ 'kg' | translate }})</label>
                             <input formControlName="weight" type="text"id="weight" class="my-input" placeholder="85">
                         </div>
                         <div class="my-form-field">
-                            <label for="height" style="margin-bottom: 0.2rem;">Height (CM)</label>
+                            <label for="height" style="margin-bottom: 0.2rem;">{{ 'height' | translate }} ({{ 'cm' | translate }})</label>
                             <input formControlName="height" type="text"id="height" class="my-input" placeholder="180">
                         </div>
                         <div class="my-form-field">
-                            <label for="targetWeight" style="margin-bottom: 0.2rem;">Target Weight (KG)</label>
+                            <label for="targetWeight" style="margin-bottom: 0.2rem;">{{ 'targetWeight' | translate }} ({{ 'kg' | translate }})</label>
                             <input formControlName="targetWeight" type="text"id="targetWeight" class="my-input" placeholder="70">
                         </div>
                         <div class="my-form-field">
-                            <label for="neck" style="margin-bottom: 0.2rem;">Neck (CM)</label>
+                            <label for="neck" style="margin-bottom: 0.2rem;">{{ 'neck' | translate }} ({{ 'cm' | translate }})</label>
                             <input formControlName="neck" type="text" id="neck" class="my-input" placeholder="40">
                         </div>
                         <div class="my-form-field">
-                            <label for="waist" style="margin-bottom: 0.2rem;">Waist (CM)</label>
+                            <label for="waist" style="margin-bottom: 0.2rem;">{{ 'waist' | translate }} ({{ 'cm' | translate }})</label>
                             <input formControlName="waist" type="text" id="waist" class="my-input" placeholder="85">
                         </div>
                         <div class="my-form-field">
-                            <label for="hips" style="margin-bottom: 0.2rem;">Hips (KG)</label>
+                            <label for="hips" style="margin-bottom: 0.2rem;">{{ 'hips' | translate }} ({{ 'cm' | translate }})</label>
                             <input formControlName="hips" type="text" id="hips" class="my-input" placeholder="90">
                         </div>
                         <div class="my-form-field" style="flex-direction: row;">
                             <div class="w-50 d-flex flex-column align-items-center">
-                                <label for="male" style="margin-bottom: 0.2rem;">Male</label>
+                                <label for="male" style="margin-bottom: 0.2rem;">{{ 'genderMale' | translate }}</label>
                                 <input formControlName="gender" type="radio" id="gender" value="male" class="my-input">
                             </div>
                             <div class="w-50 d-flex flex-column align-items-center">
-                                <label for="female" style="margin-bottom: 0.2rem;">Female</label>
+                                <label for="female" style="margin-bottom: 0.2rem;">{{ 'genderFemale' | translate }}</label>
                                 <input formControlName="gender" type="radio" id="gender" value="female" class="my-input">
                             </div>
                         </div>
                         <div class="my-form-field">
                             <button style="width: 100%; height: 2.5rem; background: transparent; border: none; color: white;">
-                                UPDATE
+                                {{ 'updateButton' | translate }}
                             </button>
                         </div>
                     </form>
@@ -50,7 +50,7 @@
                         <button (click)="changeUserCard()"
                             style="padding: 0; width: 100%; height: 100%; background: transparent; border: none; color: white;">
                             <i class="fa-solid fa-circle-right fa-rotate-180"></i>
-                            TURN BACK
+                            {{ 'turnbackButton' | translate }}
                         </button>
                     </div>
                 </div>
@@ -70,28 +70,28 @@
                         <table class="w-100">
                             <!-- Make it better. it's just a placeholder for now -->
                             <tr class="w-100" style="text-align: center; border-top: 1px solid black;">
-                                <td class="w-50 p-3">Weight</td>
-                                <td class="w-50 p-3">98</td>
+                                <td class="w-50 p-3">{{ 'weight' | translate }}</td>
+                                <td class="w-50 p-3">98 {{ 'kg' | translate }}</td>
                             </tr>
                             <tr class="w-100" style="text-align: center; border-top: 1px solid black;">
-                                <td class="w-50 p-3">Height</td>
-                                <td class="w-50 p-3">{{ userData.bodyMeasurement.height }}</td>
+                                <td class="w-50 p-3">{{ 'height' | translate }}</td>
+                                <td class="w-50 p-3">{{ userData.bodyMeasurement.height }} {{ 'cm' | translate }}</td>
                             </tr>
                             <tr class="w-100" style="text-align: center; border-top: 1px solid black;">
-                                <td class="w-50 p-3">Target Weight</td>
-                                <td class="w-50 p-3">{{ userData.bodyMeasurement.targetWeight }}</td>
+                                <td class="w-50 p-3">{{ 'targetWeight' | translate }}</td>
+                                <td class="w-50 p-3">{{ userData.bodyMeasurement.targetWeight }} {{ 'kg' | translate }}</td>
                             </tr>
                             <tr class="w-100" style="text-align: center; border-top: 1px solid black;">
-                                <td class="w-50 p-3">Neck</td>
-                                <td class="w-50 p-3">{{ userData.bodyMeasurement.neck }}</td>
+                                <td class="w-50 p-3">{{ 'neck' | translate }}</td>
+                                <td class="w-50 p-3">{{ userData.bodyMeasurement.neck }} {{ 'cm' | translate }}</td>
                             </tr>
                             <tr class="w-100" style="text-align: center; border-top: 1px solid black;">
-                                <td class="w-50 p-3">Waist</td>
-                                <td class="w-50 p-3">{{ userData.bodyMeasurement.waist }}</td>
+                                <td class="w-50 p-3">{{ 'waist' | translate }}</td>
+                                <td class="w-50 p-3">{{ userData.bodyMeasurement.waist }} {{ 'cm' | translate }}</td>
                             </tr>
                             <tr class="w-100" style="text-align: center; border-top: 1px solid black;">
-                                <td class="w-50 p-3">Hips</td>
-                                <td class="w-50 p-3">{{ userData.bodyMeasurement.hips }}</td>
+                                <td class="w-50 p-3">{{ 'hips' | translate }}</td>
+                                <td class="w-50 p-3">{{ userData.bodyMeasurement.hips }} {{ 'cm' | translate }}</td>
                             </tr>
                         </table>
                     </div>
@@ -99,7 +99,7 @@
                         style="border-radius: 0 0 2vw 2vw; height: 10%; border-top: 1px solid black;">
                         <button (click)="changeUserCard()"
                             style="padding: 0; width: 100%; height: 100%; background: transparent; border: none; color: white;">
-                            UPDATE YOUR INFO
+                            {{ 'updateInfo' | translate }}
                             <i class="fa-solid fa-circle-right"></i>
                         </button>
                     </div>

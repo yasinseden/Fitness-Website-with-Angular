@@ -3,13 +3,16 @@ import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { LanguageComponent } from './components/language/language.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    LanguageComponent
+  ],
   imports: [
     CommonModule,
     HttpClientModule,
@@ -21,7 +24,10 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
     })
   ],
-  exports: [],
+  exports: [
+    LanguageComponent,
+    TranslateModule,
+  ],
   providers: [
     TranslateService
   ]
