@@ -4,6 +4,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { LanguageComponent } from './components/language/language.component';
+import { CalculatorModalComponent } from './modals/calculator-modal/calculator-modal.component';
+import { MaterialModule } from './material/material.module';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -11,11 +13,13 @@ export function HttpLoaderFactory(http: HttpClient) {
 
 @NgModule({
   declarations: [
-    LanguageComponent
+    LanguageComponent,
+    CalculatorModalComponent
   ],
   imports: [
     CommonModule,
     HttpClientModule,
+    MaterialModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

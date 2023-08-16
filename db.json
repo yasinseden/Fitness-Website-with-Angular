@@ -13,10 +13,10 @@
       "exercises": [],
       "bodyMeasurement": {
         "weight": [],
-        "height": "",
-        "targetWeigth": "",
-        "neck": "",
-        "waist": "",
+        "height": "177",
+        "targetWeigth": "85",
+        "neck": "40",
+        "waist": "86",
         "hips": ""
       },
       "id": 1
@@ -55,10 +55,10 @@
       "exercises": [],
       "bodyMeasurement": {
         "weight": [],
-        "height": "",
-        "targetWeight": "",
-        "neck": "",
-        "waist": "",
+        "height": "189",
+        "targetWeight": "90",
+        "neck": "43",
+        "waist": "92",
         "hips": ""
       },
       "id": 3

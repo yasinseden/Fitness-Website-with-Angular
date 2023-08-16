@@ -80,6 +80,7 @@
     "turnbackButton": "TURN BACK",
     
     "profile": "Profile",
+    "calculator": "Calculator",
     "settings": "Settings",
     "logout": "Log Out"
 }

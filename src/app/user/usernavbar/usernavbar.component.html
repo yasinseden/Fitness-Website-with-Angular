@@ -17,7 +17,7 @@
             </div>
             <mat-menu #belowMenu="matMenu" yPosition="below">
                 <ng-container *ngFor="let menu of userMenuList">
-                    <button mat-menu-item>{{ menu }}</button>
+                    <button mat-menu-item (click)="menuClick(menu)">{{ menu | translate}}</button>
                 </ng-container>
             </mat-menu>
         </button>

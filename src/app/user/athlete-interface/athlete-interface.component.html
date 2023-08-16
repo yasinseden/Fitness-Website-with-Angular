@@ -55,55 +55,63 @@
                     </div>
                 </div>
                 <!-- User Id Card Field -->
-                <div [ngClass]="toggleClass" *ngIf="divSelection" class="user-id-card">
-                    <div class="d-flex align-items-center "
-                        style="width: 100%; height: 35%; border-radius: 2vw 2vw 0 0; padding-left: 1rem;">
-                        <div class="d-flex justify-content-center align-items-center h-75"
-                            style="border: 2.5px solid black; border-radius: 2vw; width: 35%; overflow: hidden;">
-                            <img src="assets\pics\Gorilla-With-Dumbbell.jpg" alt="" style="width: auto; height: 100%;">
+                <ng-container *ngIf="userData !== null; else elseTemplate">
+                    <div [ngClass]="toggleClass" *ngIf="divSelection" class="user-id-card">
+                        <div class="d-flex align-items-center "
+                            style="width: 100%; height: 35%; border-radius: 2vw 2vw 0 0; padding-left: 1rem;">
+                            <div class="d-flex justify-content-center align-items-center h-75"
+                                style="border: 2.5px solid black; border-radius: 2vw; width: 35%; overflow: hidden;">
+                                <img src="assets\pics\Gorilla-With-Dumbbell.jpg" alt="" style="width: auto; height: 100%;">
+                            </div>
+                            <div style="margin-left: 2rem; font-size: 25px;">
+                                <b>{{ userData.userName }}</b>
+                            </div>
                         </div>
-                        <div style="margin-left: 2rem; font-size: 25px;">
-                            <b>{{ userData.userName }}</b>
+                        <div style="height: 55%; width: 100%;">
+                            <table class="w-100">
+                                <!-- Make it better. it's just a placeholder for now -->
+                                <tr class="w-100" style="text-align: center; border-top: 1px solid black;">
+                                    <td class="w-50 p-3">{{ 'weight' | translate }}</td>
+                                    <td class="w-50 p-3">98 {{ 'kg' | translate }}</td>
+                                </tr>
+                                <tr class="w-100" style="text-align: center; border-top: 1px solid black;">
+                                    <td class="w-50 p-3">{{ 'height' | translate }}</td>
+                                    <td class="w-50 p-3">{{ userData.bodyMeasurement.height }} {{ 'cm' | translate }}</td>
+                                </tr>
+                                <tr class="w-100" style="text-align: center; border-top: 1px solid black;">
+                                    <td class="w-50 p-3">{{ 'targetWeight' | translate }}</td>
+                                    <td class="w-50 p-3">{{ userData.bodyMeasurement.targetWeight }} {{ 'kg' | translate }}</td>
+                                </tr>
+                                <tr class="w-100" style="text-align: center; border-top: 1px solid black;">
+                                    <td class="w-50 p-3">{{ 'neck' | translate }}</td>
+                                    <td class="w-50 p-3">{{ userData.bodyMeasurement.neck }} {{ 'cm' | translate }}</td>
+                                </tr>
+                                <tr class="w-100" style="text-align: center; border-top: 1px solid black;">
+                                    <td class="w-50 p-3">{{ 'waist' | translate }}</td>
+                                    <td class="w-50 p-3">{{ userData.bodyMeasurement.waist }} {{ 'cm' | translate }}</td>
+                                </tr>
+                                <tr class="w-100" style="text-align: center; border-top: 1px solid black;">
+                                    <td class="w-50 p-3">{{ 'hips' | translate }}</td>
+                                    <td class="w-50 p-3">{{ userData.bodyMeasurement.hips }} {{ 'cm' | translate }}</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center"
+                            style="border-radius: 0 0 2vw 2vw; height: 10%; border-top: 1px solid black;">
+                            <button (click)="changeUserCard()"
+                                style="padding: 0; width: 100%; height: 100%; background: transparent; border: none; color: white;">
+                                {{ 'updateInfo' | translate }}
+                                <i class="fa-solid fa-circle-right"></i>
+                            </button>
                         </div>
                     </div>
-                    <div style="height: 55%; width: 100%;">
-                        <table class="w-100">
-                            <!-- Make it better. it's just a placeholder for now -->
-                            <tr class="w-100" style="text-align: center; border-top: 1px solid black;">
-                                <td class="w-50 p-3">{{ 'weight' | translate }}</td>
-                                <td class="w-50 p-3">98 {{ 'kg' | translate }}</td>
-                            </tr>
-                            <tr class="w-100" style="text-align: center; border-top: 1px solid black;">
-                                <td class="w-50 p-3">{{ 'height' | translate }}</td>
-                                <td class="w-50 p-3">{{ userData.bodyMeasurement.height }} {{ 'cm' | translate }}</td>
-                            </tr>
-                            <tr class="w-100" style="text-align: center; border-top: 1px solid black;">
-                                <td class="w-50 p-3">{{ 'targetWeight' | translate }}</td>
-                                <td class="w-50 p-3">{{ userData.bodyMeasurement.targetWeight }} {{ 'kg' | translate }}</td>
-                            </tr>
-                            <tr class="w-100" style="text-align: center; border-top: 1px solid black;">
-                                <td class="w-50 p-3">{{ 'neck' | translate }}</td>
-                                <td class="w-50 p-3">{{ userData.bodyMeasurement.neck }} {{ 'cm' | translate }}</td>
-                            </tr>
-                            <tr class="w-100" style="text-align: center; border-top: 1px solid black;">
-                                <td class="w-50 p-3">{{ 'waist' | translate }}</td>
-                                <td class="w-50 p-3">{{ userData.bodyMeasurement.waist }} {{ 'cm' | translate }}</td>
-                            </tr>
-                            <tr class="w-100" style="text-align: center; border-top: 1px solid black;">
-                                <td class="w-50 p-3">{{ 'hips' | translate }}</td>
-                                <td class="w-50 p-3">{{ userData.bodyMeasurement.hips }} {{ 'cm' | translate }}</td>
-                            </tr>
-                        </table>
+                </ng-container>
+                <ng-template #elseTemplate>
+                    <div style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
+                        <p>LOADİNG...</p>
                     </div>
-                    <div class="d-flex justify-content-center align-items-center"
-                        style="border-radius: 0 0 2vw 2vw; height: 10%; border-top: 1px solid black;">
-                        <button (click)="changeUserCard()"
-                            style="padding: 0; width: 100%; height: 100%; background: transparent; border: none; color: white;">
-                            {{ 'updateInfo' | translate }}
-                            <i class="fa-solid fa-circle-right"></i>
-                        </button>
-                    </div>
-                </div>
+                </ng-template>
+                
             </div>
             <!-- User Info Tracking Graph Field -->
             <div

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/shared/services/auth.service';
+import { UserHttpService } from 'src/app/shared/services/user-http.service';
+import { UserInfoService } from 'src/app/shared/services/user-info.service';
 
 @Component({
   selector: 'app-login',
@@ -22,7 +24,8 @@ export class LoginComponent {
   constructor(
     private router: Router,
     private auth: AuthService,
-  ) {}
+    private userHttp: UserHttpService
+  ) { }
 
   get f(): { [key: string]: AbstractControl } {
     return this.loginForm.controls
@@ -33,19 +36,36 @@ export class LoginComponent {
     this.password = formValue.password as string;
     this.userNameEmail = formValue.email as string;
 
-    const validation = this.auth.isUserValid(this.userNameEmail, this.password);
 
-    if (validation[0] == true && validation[1] == 'admin') {
-      this.router.navigate(['/user/trainer']);
-    } else if (validation[0] == true && validation[1] == 'user') {
-      this.router.navigate(['/user/athlete']);
-    } else {
-      console.log('USER COULD NOT FIND');
-      console.log(validation);
-    }
-
+    // To set logged in user email and password
     this.auth.setEmail(this.userNameEmail);
     this.auth.setPassword(this.password);
+
+
+    // To send data to localstorage
+    const currentUserKey = 'currentUserDataKey'
+    this.userHttp.getUserByEmailAndPassword(this.userNameEmail, this.password).subscribe((data) => {
+      if (data && data.length > 0) {
+        const userData = data[0];
+        const dataAsString = JSON.stringify(userData)
+        localStorage.setItem(currentUserKey, dataAsString)
+      }
+    })
+
+    // To login validation control and navigation according to response
+        // It's working but not the best solution!!!!!!
+    setTimeout(() => {
+      const validation = this.auth.isUserValid(this.userNameEmail, this.password);
+      if (validation[0] == true && validation[1] == 'admin') {
+        this.router.navigate(['/user/trainer']);
+      } else if (validation[0] == true && validation[1] == 'user') {
+        this.router.navigate(['/user/athlete']);
+      } else {
+        console.log('USER COULD NOT FIND');
+        console.log(validation);
+      }
+    }, 150);
+
   }
 
 

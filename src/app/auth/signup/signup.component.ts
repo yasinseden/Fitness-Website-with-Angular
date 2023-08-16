@@ -14,11 +14,11 @@ export class SignupComponent {
 
   signupForm = new FormGroup({
     userName: new FormControl('', Validators.required),
-    password: new FormControl('12345678', [Validators.required, Validators.minLength(8)]),
+    password: new FormControl('', [Validators.required, Validators.minLength(8)]),
     firstName: new FormControl('', Validators.required),
     lastName: new FormControl('', Validators.required),
-    email: new FormControl('@fitmind.com', [Validators.required, Validators.email]),
-    phoneNumber: new FormControl('5778962521', [Validators.required, Validators.maxLength(10)]), // Learn how to lock when input length become maxLength
+    email: new FormControl('', [Validators.required, Validators.email]),
+    phoneNumber: new FormControl('', [Validators.required, Validators.maxLength(10)]), // Learn how to lock when input length become maxLength
     role: new FormControl('', Validators.required),
     birthYear: new FormControl('', Validators.required)
   })

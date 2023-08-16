@@ -1,7 +1,12 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
+import { CalculatorModalComponent } from 'src/app/shared/modals/calculator-modal/calculator-modal.component';
 import { AuthService } from 'src/app/shared/services/auth.service';
 import { MenuListProviderService } from 'src/app/shared/services/menu-list-provider.service';
 import { UserHttpService } from 'src/app/shared/services/user-http.service';
+import { UserInfoService } from 'src/app/shared/services/user-info.service';
 
 @Component({
   selector: 'app-usernavbar',
@@ -10,22 +15,52 @@ import { UserHttpService } from 'src/app/shared/services/user-http.service';
 })
 export class UsernavbarComponent {
 
-  userName: any;
-  userMenuList: string[] = []
+  public userName: any;
+  public userMenuList: string[] = []
+  private userDataSubscription: Subscription;
 
   constructor(
-    private auth: AuthService,
     private menuListService: MenuListProviderService,
-    private http: UserHttpService
+    private userInfoService: UserInfoService,
+    private dialog: MatDialog,
+    private router: Router
   ) {
     this.userMenuList = this.menuListService.userMenu
 
-    const userEmail = this.auth.getEmail();
-    const userPassword = this.auth.getPassword();
-
-    this.http.getUserByEmailAndPassword(userEmail, userPassword).subscribe((data) => {
-      this.userName = data[0].userName
+    this.userDataSubscription = this.userInfoService.userDataObservable$.subscribe((data) => {
+      this.userName = data?.userName
     })
   }
 
+  menuClick(menu: string) {
+    switch (menu) {
+      case 'profile':
+        console.log('PROFİLE');
+        break;
+      case 'calculator':
+        console.log('ADD INFO');
+
+        const dialogRef = this.dialog.open(CalculatorModalComponent, {
+          width: '500px'
+        });
+        dialogRef.afterClosed().subscribe(result => {
+          console.log('IT WORKED', result);
+        })
+        break;
+      case 'settings':
+        console.log('SETTINGS');
+        break;
+      case 'logout':
+        this.userInfoService.clearUserData();
+        this.router.navigate(['/'])
+        break;
+      default:
+        console.log('NO COMMAND RECEIVED');
+        break;
+    }
+  }
+
+  ngOnDestroy(): void {
+    this.userDataSubscription.unsubscribe();
+  }
 }

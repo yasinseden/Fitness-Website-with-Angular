@@ -6,7 +6,7 @@
     "mainPageMainHeader": "FORMA GİR & SAĞLIKLI KAL",
     "dailyUpdate":"GÜNCEL KAL",
 
-    "mainPageSecondHeader": "AMACIMIZ FİT OLMAK İSTEYEN İSANSANLARA YOL GÖSTERMEK",
+    "mainPageSecondHeader": "AMACIMIZ FİT OLMAK İSTEYEN KİŞİLERE YOL GÖSTERMEK",
     "mainPageThirdHeader": "Egzersizleri Öğrenerek Başla",
     "mainPageForthHeader": "Egzersiz İnceliklerine Dikkat Et",
     "mainPageFifthHeader": "Egzersizlerin Hedeflediği Kaslar",
@@ -32,7 +32,7 @@
     "deadlifts": "Deadlifts",
     "followUs": "BİZİ TAKİP ET",
     "copyrights": "Telif hakları",
-    "allRights": "Bütün hakları saklıdır",
+    "allRights": "Tüm hakları saklıdır",
 
     "alreadyUser": "SİZDEN BİRİYİM",
     "newUser": "SİZE KATILMAK İSTİYORUM",
@@ -80,6 +80,7 @@
     "turnbackButton": "GERİ DÖN",
 
     "profile": "Profil",
+    "calculator": "Hesaplayıcı",
     "settings": "Ayarlar",
     "logout": "Çıkış Yap"
 }
