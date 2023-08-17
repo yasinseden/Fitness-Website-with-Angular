@@ -47,15 +47,17 @@
                                 <input formControlName="gender" type="radio" id="gender" value="false" class="my-input">
                             </div>
                         </div>
-                        <div class="my-form-field my-button-field" style="margin-top: 17px;">
-                            <button class="update-button">
+                        <div class="my-form-field my-button-field" style="margin-top: 17px;" matRipple
+                            [matRippleCentered]="centered" matRippleColor="rgb(219, 84, 84)">
+                            <button class="update-button priority-content">
                                 {{ 'updateButton' | translate }}
                             </button>
                         </div>
                     </form>
                     <div class="d-flex justify-content-center align-items-center my-button-field"
-                        style="border-radius: 0 0 2vw 2vw; height: 10%; border-top: 1px solid black; margin-top: -1em;">
-                        <button (click)="changeUserCard()"
+                        style="border-radius: 0 0 2vw 2vw; height: 10%; border-top: 1px solid black; margin-top: -1em;"
+                        matRipple [matRippleCentered]="centered" matRippleColor="rgb(219, 84, 84)">
+                        <button class="priority-content" (click)="changeUserCard()"
                             style="padding: 0; width: 100%; height: 100%; background: transparent; border: none; color: white;">
                             <i class="fa-solid fa-circle-right fa-rotate-180"></i>
                             {{ 'turnbackButton' | translate }}
@@ -111,8 +113,9 @@
                             </table>
                         </div>
                         <div class="d-flex justify-content-center align-items-center my-button-field"
-                            style="border-radius: 0 0 2vw 2vw; height: 10%; border-top: 1px solid black;">
-                            <button (click)="changeUserCard()"
+                            style="border-radius: 0 0 2vw 2vw; height: 10%; border-top: 1px solid black;" matRipple
+                            [matRippleCentered]="centered" matRippleColor="rgb(219, 84, 84)">
+                            <button class="priority-content" (click)="changeUserCard()"
                                 style="padding: 0; width: 100%; height: 100%; background: transparent; border: none; color: white;">
                                 {{ 'updateInfo' | translate }}
                                 <i class="fa-solid fa-circle-right"></i>

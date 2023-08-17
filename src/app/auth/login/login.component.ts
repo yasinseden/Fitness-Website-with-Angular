@@ -3,7 +3,6 @@ import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/fo
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/shared/services/auth.service';
 import { UserHttpService } from 'src/app/shared/services/user-http.service';
-import { UserInfoService } from 'src/app/shared/services/user-info.service';
 
 @Component({
   selector: 'app-login',

@@ -44,6 +44,11 @@
     background-color: rgb(128, 128, 128);
 }
 
-.my-button-field:active {
+/* .my-button-field:active {
     background-color: rgb(219, 84, 84);
+} */
+
+.priority-content {
+    position: relative;
+    z-index: 2;
 }

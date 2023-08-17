@@ -14,6 +14,7 @@ import { UserInfoService } from 'src/app/shared/services/user-info.service';
 })
 export class AthleteInterfaceComponent implements AfterContentChecked {
 
+  public centered = true;
   public userData: UserModel | null = null;
   public divSelection: boolean = true;
   public toggleClass: string = 'change-user-card-back'
@@ -88,9 +89,12 @@ export class AthleteInterfaceComponent implements AfterContentChecked {
         this.userData.gender = formValue.gender as unknown as boolean;
       }
 
+      this.userInfoService.setUserData(this.userData)
+
       this.userHttpService.patchUserData(this.userData, this.userData?.id)
       console.log(this.userData);
     }
+
 
     this.userInfoUpdateForm.reset();
   }

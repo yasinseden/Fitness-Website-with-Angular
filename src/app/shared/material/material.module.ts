@@ -2,7 +2,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
-import { MatNativeDateModule } from '@angular/material/core';
+import { MatNativeDateModule, MatRippleModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
@@ -61,6 +61,7 @@ import { MatDividerModule } from '@angular/material/divider';
     MatSlideToggleModule,
     MatSidenavModule,
     MatDividerModule,
+    MatRippleModule,
     ClipboardModule,
     
   ],
@@ -96,6 +97,7 @@ import { MatDividerModule } from '@angular/material/divider';
     MatSlideToggleModule,
     MatSidenavModule,
     MatDividerModule,
+    MatRippleModule,
     ClipboardModule
   ]
 })
