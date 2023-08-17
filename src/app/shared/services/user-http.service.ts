@@ -29,7 +29,12 @@ export class UserHttpService {
     this._http.post<any>(this.api + "users", user).subscribe({
       next: (res) => console.log(res),
       error: (err) => console.log(err)
-      
+    })
+  }
+
+  patchUserData(userData: UserModel, id: number) {
+    this._http.patch<any>(this.api + "users" + "/" + id, userData).subscribe((res) => {
+      console.log("USERDATA UPDATED", res);
     })
   }
 }

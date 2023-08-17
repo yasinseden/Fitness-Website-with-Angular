@@ -4,48 +4,56 @@
             <div style="height: 38vw; width: 375px; border: 1px solid black; border-radius: 2vw; overflow: hidden;">
                 <!-- User Info Update Form Field -->
                 <div [ngClass]="toggleClass" *ngIf="!divSelection" class="user-id-card">
-                    <form [formGroup]="userInfoUpdate" class="p-4">
+                    <form [formGroup]="userInfoUpdateForm" class="p-4" (submit)="onSubmit()">
                         <div class="my-form-field">
-                            <label for="weight" style="margin-bottom: 0.2rem;">{{ 'weight' | translate }} ({{ 'kg' | translate }})</label>
-                            <input formControlName="weight" type="text"id="weight" class="my-input" placeholder="85">
+                            <label for="weight" style="margin-bottom: 0.2rem;">{{ 'weight' | translate }} ({{ 'kg' |
+                                translate }})</label>
+                            <input formControlName="weight" type="text" id="weight" class="my-input" placeholder="85">
                         </div>
                         <div class="my-form-field">
-                            <label for="height" style="margin-bottom: 0.2rem;">{{ 'height' | translate }} ({{ 'cm' | translate }})</label>
-                            <input formControlName="height" type="text"id="height" class="my-input" placeholder="180">
+                            <label for="height" style="margin-bottom: 0.2rem;">{{ 'height' | translate }} ({{ 'cm' |
+                                translate }})</label>
+                            <input formControlName="height" type="text" id="height" class="my-input" placeholder="180">
                         </div>
                         <div class="my-form-field">
-                            <label for="targetWeight" style="margin-bottom: 0.2rem;">{{ 'targetWeight' | translate }} ({{ 'kg' | translate }})</label>
-                            <input formControlName="targetWeight" type="text"id="targetWeight" class="my-input" placeholder="70">
+                            <label for="targetWeight" style="margin-bottom: 0.2rem;">{{ 'targetWeight' | translate }}
+                                ({{ 'kg' | translate }})</label>
+                            <input formControlName="targetWeight" type="text" id="targetWeight" class="my-input"
+                                placeholder="70">
                         </div>
                         <div class="my-form-field">
-                            <label for="neck" style="margin-bottom: 0.2rem;">{{ 'neck' | translate }} ({{ 'cm' | translate }})</label>
+                            <label for="neck" style="margin-bottom: 0.2rem;">{{ 'neck' | translate }} ({{ 'cm' |
+                                translate }})</label>
                             <input formControlName="neck" type="text" id="neck" class="my-input" placeholder="40">
                         </div>
                         <div class="my-form-field">
-                            <label for="waist" style="margin-bottom: 0.2rem;">{{ 'waist' | translate }} ({{ 'cm' | translate }})</label>
+                            <label for="waist" style="margin-bottom: 0.2rem;">{{ 'waist' | translate }} ({{ 'cm' |
+                                translate }})</label>
                             <input formControlName="waist" type="text" id="waist" class="my-input" placeholder="85">
                         </div>
                         <div class="my-form-field">
-                            <label for="hips" style="margin-bottom: 0.2rem;">{{ 'hips' | translate }} ({{ 'cm' | translate }})</label>
+                            <label for="hips" style="margin-bottom: 0.2rem;">{{ 'hips' | translate }} ({{ 'cm' |
+                                translate }})</label>
                             <input formControlName="hips" type="text" id="hips" class="my-input" placeholder="90">
                         </div>
                         <div class="my-form-field" style="flex-direction: row;">
                             <div class="w-50 d-flex flex-column align-items-center">
                                 <label for="male" style="margin-bottom: 0.2rem;">{{ 'genderMale' | translate }}</label>
-                                <input formControlName="gender" type="radio" id="gender" value="male" class="my-input">
+                                <input formControlName="gender" type="radio" id="gender" value="true" class="my-input">
                             </div>
                             <div class="w-50 d-flex flex-column align-items-center">
-                                <label for="female" style="margin-bottom: 0.2rem;">{{ 'genderFemale' | translate }}</label>
-                                <input formControlName="gender" type="radio" id="gender" value="female" class="my-input">
+                                <label for="female" style="margin-bottom: 0.2rem;">{{ 'genderFemale' | translate
+                                    }}</label>
+                                <input formControlName="gender" type="radio" id="gender" value="false" class="my-input">
                             </div>
                         </div>
-                        <div class="my-form-field">
-                            <button style="width: 100%; height: 2.5rem; background: transparent; border: none; color: white;">
+                        <div class="my-form-field my-button-field" style="margin-top: 17px;">
+                            <button class="update-button">
                                 {{ 'updateButton' | translate }}
                             </button>
                         </div>
                     </form>
-                    <div class="d-flex justify-content-center align-items-center"
+                    <div class="d-flex justify-content-center align-items-center my-button-field"
                         style="border-radius: 0 0 2vw 2vw; height: 10%; border-top: 1px solid black; margin-top: -1em;">
                         <button (click)="changeUserCard()"
                             style="padding: 0; width: 100%; height: 100%; background: transparent; border: none; color: white;">
@@ -61,7 +69,8 @@
                             style="width: 100%; height: 35%; border-radius: 2vw 2vw 0 0; padding-left: 1rem;">
                             <div class="d-flex justify-content-center align-items-center h-75"
                                 style="border: 2.5px solid black; border-radius: 2vw; width: 35%; overflow: hidden;">
-                                <img src="assets\pics\Gorilla-With-Dumbbell.jpg" alt="" style="width: auto; height: 100%;">
+                                <img src="assets\pics\Gorilla-With-Dumbbell.jpg" alt=""
+                                    style="width: auto; height: 100%;">
                             </div>
                             <div style="margin-left: 2rem; font-size: 25px;">
                                 <b>{{ userData.userName }}</b>
@@ -72,15 +81,19 @@
                                 <!-- Make it better. it's just a placeholder for now -->
                                 <tr class="w-100" style="text-align: center; border-top: 1px solid black;">
                                     <td class="w-50 p-3">{{ 'weight' | translate }}</td>
-                                    <td class="w-50 p-3">98 {{ 'kg' | translate }}</td>
+                                    <td class="w-50 p-3">{{
+                                        userData.bodyMeasurement.weight[(userData.bodyMeasurement.weight).length -
+                                        1].weightData }} {{ 'kg' | translate }}</td>
                                 </tr>
                                 <tr class="w-100" style="text-align: center; border-top: 1px solid black;">
                                     <td class="w-50 p-3">{{ 'height' | translate }}</td>
-                                    <td class="w-50 p-3">{{ userData.bodyMeasurement.height }} {{ 'cm' | translate }}</td>
+                                    <td class="w-50 p-3">{{ userData.bodyMeasurement.height }} {{ 'cm' | translate }}
+                                    </td>
                                 </tr>
                                 <tr class="w-100" style="text-align: center; border-top: 1px solid black;">
                                     <td class="w-50 p-3">{{ 'targetWeight' | translate }}</td>
-                                    <td class="w-50 p-3">{{ userData.bodyMeasurement.targetWeight }} {{ 'kg' | translate }}</td>
+                                    <td class="w-50 p-3">{{ userData.bodyMeasurement.targetWeight }} {{ 'kg' | translate
+                                        }}</td>
                                 </tr>
                                 <tr class="w-100" style="text-align: center; border-top: 1px solid black;">
                                     <td class="w-50 p-3">{{ 'neck' | translate }}</td>
@@ -88,7 +101,8 @@
                                 </tr>
                                 <tr class="w-100" style="text-align: center; border-top: 1px solid black;">
                                     <td class="w-50 p-3">{{ 'waist' | translate }}</td>
-                                    <td class="w-50 p-3">{{ userData.bodyMeasurement.waist }} {{ 'cm' | translate }}</td>
+                                    <td class="w-50 p-3">{{ userData.bodyMeasurement.waist }} {{ 'cm' | translate }}
+                                    </td>
                                 </tr>
                                 <tr class="w-100" style="text-align: center; border-top: 1px solid black;">
                                     <td class="w-50 p-3">{{ 'hips' | translate }}</td>
@@ -96,7 +110,7 @@
                                 </tr>
                             </table>
                         </div>
-                        <div class="d-flex justify-content-center align-items-center"
+                        <div class="d-flex justify-content-center align-items-center my-button-field"
                             style="border-radius: 0 0 2vw 2vw; height: 10%; border-top: 1px solid black;">
                             <button (click)="changeUserCard()"
                                 style="padding: 0; width: 100%; height: 100%; background: transparent; border: none; color: white;">
@@ -107,11 +121,12 @@
                     </div>
                 </ng-container>
                 <ng-template #elseTemplate>
-                    <div style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
+                    <div
+                        style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
                         <p>LOADİNG...</p>
                     </div>
                 </ng-template>
-                
+
             </div>
             <!-- User Info Tracking Graph Field -->
             <div

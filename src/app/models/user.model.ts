@@ -1,4 +1,4 @@
-import { BodyMeasurementsModel } from "./body-measurements.mode";
+import { BodyMeasurementsModel } from "./body-measurements.model";
 import { ExerciseModel } from "./exercise.model";
 
 export class UserModel {
@@ -9,19 +9,10 @@ export class UserModel {
     password: string = '';
     phoneNumber: string = '';
     role: string = '';
+    gender: boolean | undefined;
     birthYear: any | null = null;
     profilePic: string = '';
     exercises: ExerciseModel[] = [];
     bodyMeasurement: BodyMeasurementsModel = new BodyMeasurementsModel;
-
-    getAge(): any {
-        const currentDate = new Date();
-        const year = currentDate.getFullYear();
-
-        if (this.birthYear !== null) {
-            return year - this.birthYear;
-        } else {
-            return null;
-        }
-    }
+    id: any;
 }

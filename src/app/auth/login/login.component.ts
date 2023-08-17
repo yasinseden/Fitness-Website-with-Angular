@@ -25,7 +25,9 @@ export class LoginComponent {
     private router: Router,
     private auth: AuthService,
     private userHttp: UserHttpService
-  ) { }
+  ) {
+    localStorage.removeItem('currentUserDataKey')
+  }
 
   get f(): { [key: string]: AbstractControl } {
     return this.loginForm.controls
@@ -54,7 +56,7 @@ export class LoginComponent {
 
     // To login validation control and navigation according to response
         // It's working but not the best solution!!!!!!
-    setTimeout(() => {
+    
       const validation = this.auth.isUserValid(this.userNameEmail, this.password);
       if (validation[0] == true && validation[1] == 'admin') {
         this.router.navigate(['/user/trainer']);
@@ -64,7 +66,7 @@ export class LoginComponent {
         console.log('USER COULD NOT FIND');
         console.log(validation);
       }
-    }, 150);
+  
 
   }
 

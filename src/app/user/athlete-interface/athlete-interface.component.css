@@ -33,5 +33,17 @@
     background-color: rgb(229, 226, 226);
     padding: 0.3rem;
     border: none;
-    color: white;
+    color: black;
+}
+
+.update-button {
+    width: 100%; height: 2.5rem; background: transparent; border: none; color: white;
+}
+
+.my-button-field:hover {
+    background-color: rgb(128, 128, 128);
+}
+
+.my-button-field:active {
+    background-color: rgb(219, 84, 84);
 }
