@@ -17,6 +17,7 @@ export class AthleteInterfaceComponent implements AfterContentChecked {
   public centered = true;
   public userData: UserModel | null = null;
   public divSelection: boolean = true;
+  public loadChartComponent: boolean = false;
   public toggleClass: string = 'change-user-card-back'
   public columnClass: string = 'col-12'
   public weightDataForTemplate: any;
@@ -61,6 +62,12 @@ export class AthleteInterfaceComponent implements AfterContentChecked {
     // }
   }
 
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.loadChartComponent = true;
+    }, 5000);
+  }
+
   onSubmit() {
     const formValue = this.userInfoUpdateForm.value;
 
@@ -92,9 +99,7 @@ export class AthleteInterfaceComponent implements AfterContentChecked {
       this.userInfoService.setUserData(this.userData)
 
       this.userHttpService.patchUserData(this.userData, this.userData?.id)
-      console.log(this.userData);
     }
-
 
     this.userInfoUpdateForm.reset();
   }

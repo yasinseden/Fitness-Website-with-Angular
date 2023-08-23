@@ -55,6 +55,18 @@
           {
             "dateData": "2023-08-17T17:12:38.366Z",
             "weightData": "92"
+          },
+          {
+            "dateData": "2023-08-23T08:31:50.328Z",
+            "weightData": "90"
+          },
+          {
+            "dateData": "2023-08-23T08:45:34.007Z",
+            "weightData": "87"
+          },
+          {
+            "dateData": "2023-08-23T14:29:01.485Z",
+            "weightData": "90"
           }
         ],
         "height": "187",
@@ -75,7 +87,7 @@
       "role": "user",
       "gender": "",
       "birthYear": 2001,
-      "profilePic": "https://randomuser.me/api/portraits/men/38.jpg",
+      "profilePic": "https://randomuser.me/api/portraits/men/68.jpg",
       "exercises": [],
       "bodyMeasurement": {
         "weight": [
@@ -85,6 +97,22 @@
           },
           {
             "dateData": "2023-08-22T10:44:13.902Z",
+            "weightData": "100"
+          },
+          {
+            "dateData": "2023-08-23T11:47:27.787Z",
+            "weightData": "95"
+          },
+          {
+            "dateData": "2023-08-23T11:47:33.090Z",
+            "weightData": "91"
+          },
+          {
+            "dateData": "2023-08-23T11:47:37.015Z",
+            "weightData": "94"
+          },
+          {
+            "dateData": "2023-08-23T11:47:40.629Z",
             "weightData": "100"
           }
         ],
@@ -325,6 +353,27 @@
       },
       "id": 13,
       "gender": "false"
+    },
+    {
+      "firstName": "Kemal",
+      "lastName": "Deniz",
+      "userName": "kemal",
+      "email": "kemal@fitmind.com",
+      "password": "12345678",
+      "phoneNumber": "5869658745",
+      "role": "admin",
+      "birthYear": 2001,
+      "profilePic": "",
+      "exercises": [],
+      "bodyMeasurement": {
+        "weight": [],
+        "height": "",
+        "targetWeight": "",
+        "neck": "",
+        "waist": "",
+        "hips": ""
+      },
+      "id": 14
     }
   ],
   "exercises": []

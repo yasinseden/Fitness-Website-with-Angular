@@ -24,9 +24,7 @@ export class LoginComponent {
     private router: Router,
     private auth: AuthService,
     private userHttp: UserHttpService
-  ) {
-    localStorage.removeItem('currentUserDataKey')
-  }
+  ) {}
 
   get f(): { [key: string]: AbstractControl } {
     return this.loginForm.controls

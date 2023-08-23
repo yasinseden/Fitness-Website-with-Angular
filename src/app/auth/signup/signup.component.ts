@@ -57,23 +57,4 @@ export class SignupComponent {
 
     this.userHttp.postUser(user);
   }
-  
-  /* 
-  // This is an easier way to create a predifined object with values from the form
-    // Assuming you have the predefined object as shown earlier
-    predefinedObject = {
-      name: '',
-      lastName: '',
-      email: '',
-      phoneNumber: ''
-    };
-  
-    constructor(private formBuilder: FormBuilder, private http: HttpClient) {
-      this.myForm = this.formBuilder.group(this.predefinedObject);
-    }
-  
-    onSubmit() {
-      // Merge the form values into the predefined object
-      const dataToPost = { ...this.predefinedObject, ...this.myForm.value };
-  */
 }

@@ -43,7 +43,8 @@
         <div class="flu-background"
             style="width: 55%; height: 100%; background-image: url(assets/pics/Empty-Gym-Home-Header.jpg); background-size: cover; position: relative;">
             <img src="assets\pics\Red-Circle.png" style="position: absolute; width: 55%; bottom: 28%; left: -15%;">
-            <button (click)="displayClick()" style="width: 125px; height: 125px; position: absolute; left: 5%; bottom: 4%; z-index: 1; background: transparent; border: none;">
+            <button (click)="displayClick()"
+                style="width: 125px; height: 125px; position: absolute; left: 5%; bottom: 4%; z-index: 1; background: transparent; border: none;">
                 <img src="assets\pics\Player-Icon.png" alt="" style="opacity: 0.8; width: 100%; height: auto;">
             </button>
             <img src="assets\pics\Lifting-Dumbell-3-removebg-preview.png" height="95%"
@@ -72,12 +73,12 @@
     style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(0, 0, 0, 0.8); border-radius: 25px; z-index: 10;"
     [ngClass]="displayClass">
     <div style="position: relative;">
-        <!-- Tasarım amacıyla ilerleyen dönemlerde skewed yapılabilir. Şimdilik vakit kaybetmeye gerek yok -->
         <button
             style="color: #ff0000; position: absolute; right: 0.75rem; top: 0.75rem; border-radius: 50%; background: transparent; "
             (click)="displayClick()"><b>X</b></button>
     </div>
     <div class="d-flex justify-content-center align-items-center p-5" style="max-height: 100%;">
-        <video src="assets\pics\fitness website 0.mp4" controls style="max-height: 75%; width: auto; background-color: black; padding: 5vh; border-radius: 25px;"></video>
+        <video src="assets\pics\fitness website 0.mp4" controls
+            style="max-height: 75%; width: auto; background-color: black; padding: 5vh; border-radius: 25px;"></video>
     </div>
 </div>
