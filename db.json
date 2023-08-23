@@ -32,7 +32,7 @@
       "role": "user",
       "gender": "true",
       "birthYear": 1998,
-      "profilePic": "",
+      "profilePic": "https://randomuser.me/api/portraits/men/78.jpg",
       "exercises": [],
       "bodyMeasurement": {
         "weight": [
@@ -75,13 +75,17 @@
       "role": "user",
       "gender": "",
       "birthYear": 2001,
-      "profilePic": "",
+      "profilePic": "https://randomuser.me/api/portraits/men/38.jpg",
       "exercises": [],
       "bodyMeasurement": {
         "weight": [
           {
             "dateData": "2023-08-17T19:09:42.577Z",
             "weightData": "104"
+          },
+          {
+            "dateData": "2023-08-22T10:44:13.902Z",
+            "weightData": "100"
           }
         ],
         "height": "189",
@@ -304,10 +308,15 @@
       "phoneNumber": "5263659887",
       "role": "user",
       "birthYear": 2004,
-      "profilePic": "",
+      "profilePic": "https://randomuser.me/api/portraits/women/75.jpg",
       "exercises": [],
       "bodyMeasurement": {
-        "weight": [],
+        "weight": [
+          {
+            "dateData": "2023-08-18T21:12:55.577Z",
+            "weightData": "51"
+          }
+        ],
         "height": "",
         "targetWeight": "",
         "neck": "",

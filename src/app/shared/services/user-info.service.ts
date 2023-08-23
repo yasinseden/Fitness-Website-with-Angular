@@ -20,6 +20,15 @@ export class UserInfoService {
     }
   }
 
+  getUserData() {
+    const currentUserData: any = localStorage.getItem(CURRENT_USER_KEY);
+    if (currentUserData) {
+      const parsedUserData = JSON.parse(currentUserData)
+      this.userDataBehavioralSubject.next(parsedUserData)
+    }
+    return currentUserData;
+  }
+
   setUserData(user: UserModel): void {
     localStorage.setItem(CURRENT_USER_KEY, JSON.stringify(user));
     this.userDataBehavioralSubject.next(user)

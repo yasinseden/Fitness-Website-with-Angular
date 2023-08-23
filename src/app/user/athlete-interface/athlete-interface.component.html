@@ -65,13 +65,13 @@
                     </div>
                 </div>
                 <!-- User Id Card Field -->
-                <ng-container *ngIf="userData !== null; else elseTemplate">
+                <ng-container *ngIf="userData !== null; else loadingTemplate">
                     <div [ngClass]="toggleClass" *ngIf="divSelection" class="user-id-card">
                         <div class="d-flex align-items-center "
                             style="width: 100%; height: 35%; border-radius: 2vw 2vw 0 0; padding-left: 1rem;">
                             <div class="d-flex justify-content-center align-items-center h-75"
                                 style="border: 2.5px solid black; border-radius: 2vw; width: 35%; overflow: hidden;">
-                                <img src="assets\pics\Gorilla-With-Dumbbell.jpg" alt=""
+                                <img src="{{ userData.profilePic }}" alt=""
                                     style="width: auto; height: 100%;">
                             </div>
                             <div style="margin-left: 2rem; font-size: 25px;">
@@ -123,17 +123,19 @@
                         </div>
                     </div>
                 </ng-container>
-                <ng-template #elseTemplate>
+                <ng-template #loadingTemplate>
                     <div
                         style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
                         <p>LOADİNG...</p>
                     </div>
                 </ng-template>
-
             </div>
-            <!-- User Info Tracking Graph Field -->
+            <!-- Dynamic right side field -->
             <div
-                style="height: 25vw; width: 775px; background-color: blueviolet; border-radius: 2vw; margin-left: 5vw;">
+                style="height: 38vw; width: 775px; border: 1px solid black; overflow: hidden; background-color: rgba(66, 66, 66, 255); margin-left: 5vw; overflow: auto;">
+                <!-- This is a seperator to find the selector easily -->
+                <app-athlete-chart></app-athlete-chart>
+                <!-- This is a seperator to find the selector easily -->
             </div>
         </div>
     </div>

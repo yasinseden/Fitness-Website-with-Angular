@@ -13,7 +13,7 @@
         <button mat-button [matMenuTriggerFor]="belowMenu"
             style="height: 40px; width: 40px; background: transparent; padding: 0;">
             <div style="border: 1px solid red; border-radius: 50%; overflow: hidden; position: relative; left: 23%;">
-                <img src="assets\pics\Gorilla-With-Dumbbell.jpg" alt="" style="height: 40px; width: 40px;">
+                <img src="{{ userPic }}" alt="" style="height: 40px; width: 40px;">
             </div>
             <mat-menu #belowMenu="matMenu" yPosition="below">
                 <ng-container *ngFor="let menu of userMenuList">

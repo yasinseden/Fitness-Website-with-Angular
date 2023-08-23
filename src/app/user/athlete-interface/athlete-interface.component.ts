@@ -54,11 +54,11 @@ export class AthleteInterfaceComponent implements AfterContentChecked {
     })
 
     // It's not a good usage. Find a better way!!!!!
-    if (!this.userData) {
-      setTimeout(() => {
-        window.location.reload();
-      }, 500)
-    }
+    // if (!this.userData) {
+    //   setTimeout(() => {
+    //     window.location.reload();
+    //   }, 500)
+    // }
   }
 
   onSubmit() {
@@ -105,13 +105,22 @@ export class AthleteInterfaceComponent implements AfterContentChecked {
     setTimeout(() => { this.toggleClass = 'change-user-card-back' }, 650);
   }
 
-     // It's working but not the best way. Find a better way!!!
+  // It's working but not the best way. Find a better way!!!
   ngAfterContentChecked(): void {
+      // The time out is just show loding phase
+    setTimeout(() => {
+      if (!this.userData) {
+        this.userInfoService.getUserData();
+      }
+    }, 2000)
+
     this.cdRef.detectChanges();
   }
 
   ngOnDestroy(): void {
     this.isSidebarOpenSubcription.unsubscribe();
     this.userDataSubscription.unsubscribe();
+    this.userData = null;
+    this.userInfoService.clearUserData();
   }
 }

@@ -54,18 +54,18 @@ export class LoginComponent {
     })
 
     // To login validation control and navigation according to response
-        // It's working but not the best solution!!!!!!
-    
-      const validation = this.auth.isUserValid(this.userNameEmail, this.password);
-      if (validation[0] == true && validation[1] == 'admin') {
-        this.router.navigate(['/user/trainer']);
-      } else if (validation[0] == true && validation[1] == 'user') {
-        this.router.navigate(['/user/athlete']);
-      } else {
-        console.log('USER COULD NOT FIND');
-        console.log(validation);
-      }
-  
+      // It's working but not the best solution!!!!!!
+
+    const validation = this.auth.isUserValid(this.userNameEmail, this.password);
+    if (validation[0] == true && validation[1] == 'admin') {
+      this.router.navigate(['/user/trainer']);
+    } else if (validation[0] == true && validation[1] == 'user') {
+      this.router.navigate(['/user/athlete']);
+    } else {
+      console.log('USER COULD NOT FIND');
+      console.log(validation);
+    }
+
 
   }
 

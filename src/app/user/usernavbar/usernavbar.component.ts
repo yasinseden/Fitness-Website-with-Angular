@@ -3,9 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { CalculatorModalComponent } from 'src/app/shared/modals/calculator-modal/calculator-modal.component';
-import { AuthService } from 'src/app/shared/services/auth.service';
 import { MenuListProviderService } from 'src/app/shared/services/menu-list-provider.service';
-import { UserHttpService } from 'src/app/shared/services/user-http.service';
 import { UserInfoService } from 'src/app/shared/services/user-info.service';
 
 @Component({
@@ -16,6 +14,7 @@ import { UserInfoService } from 'src/app/shared/services/user-info.service';
 export class UsernavbarComponent {
 
   public userName: any;
+  public userPic: any;
   public userMenuList: string[] = []
   private userDataSubscription: Subscription;
 
@@ -28,7 +27,8 @@ export class UsernavbarComponent {
     this.userMenuList = this.menuListService.userMenu
 
     this.userDataSubscription = this.userInfoService.userDataObservable$.subscribe((data) => {
-      this.userName = data?.userName
+      this.userName = data?.userName;
+      this.userPic = data?.profilePic
     })
   }
 

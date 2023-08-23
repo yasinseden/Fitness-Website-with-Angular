@@ -9,6 +9,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { UsernavbarComponent } from './usernavbar/usernavbar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
+import { AthleteChartComponent } from '../standalone-components/athlete-chart/athlete-chart.component';
 
 
 
@@ -27,6 +28,7 @@ import { SharedModule } from '../shared/shared.module';
     FormsModule,
     ReactiveFormsModule,
     SharedModule,
+    AthleteChartComponent,
   ]
 })
 export class UserModule { }
