@@ -134,7 +134,7 @@
                 style="height: 38vw; width: 775px; border: 1px solid black; overflow: hidden; background-color: rgba(66, 66, 66, 255); margin-left: 5vw; overflow: auto;">
                 <ng-container *ngIf="loadChartComponent == true; else elseTemplate">
                     <!-- This is a seperator to find the selector easily -->
-                    <app-athlete-chart></app-athlete-chart>
+                    <app-athlete-chart #athleteChartComponentRef></app-athlete-chart>
                     <!-- This is a seperator to find the selector easily -->
                 </ng-container>
                 <ng-template #elseTemplate>

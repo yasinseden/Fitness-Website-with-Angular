@@ -1,10 +1,11 @@
-import { ChangeDetectorRef, Component } from '@angular/core';
+import { ChangeDetectorRef, Component, Input, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ChartConfiguration, ChartOptions } from 'chart.js';
-import { NgChartsModule } from 'ng2-charts';
+import { BaseChartDirective, NgChartsModule } from 'ng2-charts';
 import { UserInfoService } from 'src/app/shared/services/user-info.service';
 import { Subscription } from 'rxjs';
 import { UserModel } from 'src/app/models/user.model';
+import { weightDataModel } from 'src/app/models/weight-data.model';
 
 @Component({
   selector: 'app-athlete-chart',
@@ -19,9 +20,11 @@ export class AthleteChartComponent {
   public userWeightData: any[] = [];
   public userWeightDataWeightArr: any[] = [];
   public userWeightDateDataArr: any[] = [];
+  public userWeightLeanBodyMassDataArr: any[] = [];
+  public userWeightFatPercentage: any[] = [];
   private userDataSubscription: Subscription;
 
-  constructor(private userInfoService: UserInfoService, private cdRef: ChangeDetectorRef) {
+  constructor(private userInfoService: UserInfoService) {
 
     this.userDataSubscription = this.userInfoService.userDataObservable$.subscribe((data) => {
       this.userData = data;
@@ -33,16 +36,9 @@ export class AthleteChartComponent {
     for (let i = 0; i < this.userWeightData.length; i++) {
       this.userWeightDateDataArr.push(this.userWeightData[i].dateData);
       this.userWeightDataWeightArr.push(this.userWeightData[i].weightData);
+      this.userWeightLeanBodyMassDataArr.push(this.userWeightData[i].leanBodyMass)
+      this.userWeightFatPercentage.push(this.userWeightData[i].fatPercentage)
     }
-
-    console.log(this.userWeightDataWeightArr);
-    console.log(this.userWeightData);
-
-    // if (!this.userData) {
-    //   setTimeout(() => {
-    //     window.location.reload();
-    //   }, 500)
-    // }
   }
 
   public lineChartData: ChartConfiguration<'line'>['data'] = {
@@ -50,11 +46,24 @@ export class AthleteChartComponent {
     datasets: [
       {
         data: [] = this.userWeightDataWeightArr,
-        label: 'Weight Data',
-        fill: true,
-        tension: 0.5,
-        borderColor: 'black',
-        backgroundColor: 'rgba(255,0,0,0.3)'
+        label: 'Weight Data (KG)',
+        fill: false,
+        tension: 0.3,
+        borderColor: 'red',
+      },
+      {
+        data: [] = this.userWeightLeanBodyMassDataArr,
+        label: 'Lean Body Mass Data (KG)',
+        fill: false,
+        tension: 0.3,
+        borderColor: 'blue',
+      },
+      {
+        data: [] = this.userWeightFatPercentage,
+        label: 'Fat Percentage (%)',
+        fill: false,
+        tension: 0.3,
+        borderColor: 'orange',
       }
     ]
   };
@@ -62,12 +71,27 @@ export class AthleteChartComponent {
     responsive: true,
     scales: {
       y: {
-        suggestedMin: 80,
+        suggestedMin: 60,
         suggestedMax: 95
       }
-    }
+    },
+    aspectRatio: 2 | 2
   };
   public lineChartLegend = true;
+
+  // BaseChartDirective allows me to make changes dynamically. NOTE: Learn more about BaseChartDirective
+  @ViewChild(BaseChartDirective) chart?: BaseChartDirective;
+
+  @Input() pushData(newWeightData: weightDataModel) {
+    this.lineChartData.datasets[0].data.push(newWeightData.weightData);
+    this.lineChartData.labels?.push(newWeightData.dateData)
+    this.lineChartData.datasets[1].data.push(newWeightData.leanBodyMass)
+    if (newWeightData.fatPercentage) {
+      this.lineChartData.datasets[2].data.push(newWeightData.fatPercentage)
+    }
+
+    this.chart?.update();
+  }
 
   ngOnDestroy(): void {
     this.userDataSubscription.unsubscribe()

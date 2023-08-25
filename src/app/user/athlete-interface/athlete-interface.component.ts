@@ -1,4 +1,4 @@
-import { AfterContentChecked, ChangeDetectorRef, Component } from '@angular/core';
+import { AfterContentChecked, ChangeDetectorRef, Component, ViewChild } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { UserModel } from 'src/app/models/user.model';
@@ -6,6 +6,7 @@ import { weightDataModel } from 'src/app/models/weight-data.model';
 import { SidebarUserMediatorService } from 'src/app/shared/services/sidebar-user-mediator.service';
 import { UserHttpService } from 'src/app/shared/services/user-http.service';
 import { UserInfoService } from 'src/app/shared/services/user-info.service';
+import { AthleteChartComponent } from 'src/app/standalone-components/athlete-chart/athlete-chart.component';
 
 @Component({
   selector: 'app-athlete-interface',
@@ -53,56 +54,67 @@ export class AthleteInterfaceComponent implements AfterContentChecked {
     this.userDataSubscription = this.userInfoService.userDataObservable$.subscribe((data) => {
       this.userData = data;
     })
-
-    // It's not a good usage. Find a better way!!!!!
-    // if (!this.userData) {
-    //   setTimeout(() => {
-    //     window.location.reload();
-    //   }, 500)
-    // }
   }
 
   ngOnInit(): void {
-    setTimeout(() => {
+    if (this.userData) {
       this.loadChartComponent = true;
-    }, 5000);
+    } else {
+      setTimeout(() => {
+        this.loadChartComponent = true;
+      }, 5000);
+    }
   }
+
+  @ViewChild('athleteChartComponentRef') athleteChartComponentRef: AthleteChartComponent | undefined; 
 
   onSubmit() {
     const formValue = this.userInfoUpdateForm.value;
+    const userModel: UserModel = new UserModel
 
     if (this.userData) {
       // Find better and shorter way to check values!!!!
-      const weightData = new weightDataModel(formValue.weight as unknown as number);
+      // userModel variable is for calculate the lean body mass instantaneously
+      if (formValue.height) {
+        this.userData.bodyMeasurement.height = formValue.height as unknown as number;
+        userModel.bodyMeasurement.height = formValue.height as unknown as number
+      }
+      if (formValue.targetWeight) {
+        this.userData.bodyMeasurement.targetWeight = formValue.targetWeight as unknown as number;
+      }
+      if (formValue.neck) {
+        this.userData.bodyMeasurement.neck = formValue.neck as unknown as number;
+        userModel.bodyMeasurement.neck = formValue.neck as unknown as number
+      }
+      if (formValue.waist) {
+        this.userData.bodyMeasurement.waist = formValue.waist as unknown as number;
+        userModel.bodyMeasurement.waist = formValue.waist as unknown as number;
+      }
+      if (formValue.hips) {
+        this.userData.bodyMeasurement.hips = formValue.hips as unknown as number;
+        userModel.bodyMeasurement.hips = formValue.hips as unknown as number;
+      }
+      if (formValue.gender) {
+        this.userData.gender = formValue.gender as unknown as string;
+        userModel.gender = formValue.gender as unknown as string;
+      }
+      const weightData = new weightDataModel(formValue.weight as unknown as number, userModel, this.userData);
       if (formValue.weight) {
         this.userData.bodyMeasurement.weight.push(weightData);
       }
-      if (formValue.height) {
-        this.userData.bodyMeasurement.height = formValue.height as string;
-      }
-      if (formValue.targetWeight) {
-        this.userData.bodyMeasurement.targetWeight = formValue.targetWeight as string;
-      }
-      if (formValue.neck) {
-        this.userData.bodyMeasurement.neck = formValue.neck as string;
-      }
-      if (formValue.waist) {
-        this.userData.bodyMeasurement.waist = formValue.waist as string;
-      }
-      if (formValue.hips) {
-        this.userData.bodyMeasurement.hips = formValue.hips as string;
-      }
-      if (formValue.gender) {
-        this.userData.gender = formValue.gender as unknown as boolean;
-      }
-
+      
       this.userInfoService.setUserData(this.userData)
-
+      
       this.userHttpService.patchUserData(this.userData, this.userData?.id)
+
+      // This method dynamically updates the chart. It's taken from child component (AthleteChartComponent)
+      this.athleteChartComponentRef?.pushData(weightData);
     }
 
     this.userInfoUpdateForm.reset();
+
   }
+
 
   changeUserCard() {
     this.toggleClass = 'change-user-card';
@@ -112,7 +124,7 @@ export class AthleteInterfaceComponent implements AfterContentChecked {
 
   // It's working but not the best way. Find a better way!!!
   ngAfterContentChecked(): void {
-      // The time out is just show loding phase
+    // The time out is just show loding phase
     setTimeout(() => {
       if (!this.userData) {
         this.userInfoService.getUserData();

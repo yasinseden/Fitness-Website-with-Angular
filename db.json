@@ -35,43 +35,10 @@
       "profilePic": "https://randomuser.me/api/portraits/men/78.jpg",
       "exercises": [],
       "bodyMeasurement": {
-        "weight": [
-          {
-            "dateData": "2023-04-17T13:46:43.736Z",
-            "weightData": "85"
-          },
-          {
-            "dateData": "2023-05-17T13:48:16.698Z",
-            "weightData": "88"
-          },
-          {
-            "dateData": "2023-06-17T13:48:58.573Z",
-            "weightData": "90"
-          },
-          {
-            "dateData": "2023-07-17T13:49:23.093Z",
-            "weightData": "89"
-          },
-          {
-            "dateData": "2023-08-17T17:12:38.366Z",
-            "weightData": "92"
-          },
-          {
-            "dateData": "2023-08-23T08:31:50.328Z",
-            "weightData": "90"
-          },
-          {
-            "dateData": "2023-08-23T08:45:34.007Z",
-            "weightData": "87"
-          },
-          {
-            "dateData": "2023-08-23T14:29:01.485Z",
-            "weightData": "90"
-          }
-        ],
-        "height": "187",
-        "targetWeight": "92",
-        "neck": "42",
+        "weight": [],
+        "height": "184",
+        "targetWeight": "93",
+        "neck": "44",
         "waist": "88",
         "hips": "90"
       },
@@ -79,47 +46,59 @@
     },
     {
       "firstName": "Arda",
-      "lastName": "Demir",
+      "lastName": "Çay",
       "userName": "konjense",
       "email": "arda@fitmind.com",
       "password": "12345678",
       "phoneNumber": "5468454862",
       "role": "user",
-      "gender": "",
+      "gender": "true",
       "birthYear": 2001,
       "profilePic": "https://randomuser.me/api/portraits/men/68.jpg",
       "exercises": [],
       "bodyMeasurement": {
         "weight": [
           {
-            "dateData": "2023-08-17T19:09:42.577Z",
-            "weightData": "104"
+            "weightData": "85",
+            "dateData": "2023-04-25",
+            "fatPercentage": 28.66,
+            "leanBodyMass": 60.64
           },
           {
-            "dateData": "2023-08-22T10:44:13.902Z",
-            "weightData": "100"
+            "weightData": "87",
+            "dateData": "2023-05-25",
+            "fatPercentage": 28.66,
+            "leanBodyMass": 62.07
           },
           {
-            "dateData": "2023-08-23T11:47:27.787Z",
-            "weightData": "95"
+            "weightData": "90",
+            "dateData": "2023-06-25",
+            "fatPercentage": 27.96,
+            "leanBodyMass": 64.84
           },
           {
-            "dateData": "2023-08-23T11:47:33.090Z",
-            "weightData": "91"
+            "weightData": "85",
+            "dateData": "2023-07-25",
+            "fatPercentage": 27.96,
+            "leanBodyMass": 61.23
           },
           {
-            "dateData": "2023-08-23T11:47:37.015Z",
-            "weightData": "94"
+            "weightData": "87",
+            "dateData": "2023-08-25",
+            "fatPercentage": 27.96,
+            "leanBodyMass": 62.67
           },
           {
-            "dateData": "2023-08-23T11:47:40.629Z",
-            "weightData": "100"
+            "weightData": "89",
+            "dateData": "2023-08-25",
+            "fatPercentage": 24.26,
+            "leanBodyMass": 67.41
           }
         ],
-        "height": "189",
-        "targetWeight": "90",
-        "neck": "43",
-        "waist": "92",
+        "height": "175",
+        "targetWeight": "85",
+        "neck": "40",
+        "waist": "88",
         "hips": ""
       },
       "id": 3
@@ -132,17 +111,17 @@
       "password": "12345678",
       "phoneNumber": "5468454862",
       "role": "user",
-      "gender": "",
+      "gender": "true",
       "birthYear": 2004,
       "profilePic": "",
       "exercises": [],
       "bodyMeasurement": {
         "weight": [],
-        "height": "",
-        "targetWeight": "",
-        "neck": "",
-        "waist": "",
-        "hips": ""
+        "height": "170",
+        "targetWeight": "80",
+        "neck": "40",
+        "waist": "78",
+        "hips": "88"
       },
       "id": 4
     },
@@ -313,12 +292,7 @@
       "profilePic": "",
       "exercises": [],
       "bodyMeasurement": {
-        "weight": [
-          {
-            "dateData": "2023-08-17T11:46:45.158Z",
-            "weightData": "76"
-          }
-        ],
+        "weight": [],
         "height": "172",
         "targetWeight": "81",
         "neck": "37",
@@ -339,12 +313,7 @@
       "profilePic": "https://randomuser.me/api/portraits/women/75.jpg",
       "exercises": [],
       "bodyMeasurement": {
-        "weight": [
-          {
-            "dateData": "2023-08-18T21:12:55.577Z",
-            "weightData": "51"
-          }
-        ],
+        "weight": [],
         "height": "",
         "targetWeight": "",
         "neck": "",
@@ -374,6 +343,28 @@
         "hips": ""
       },
       "id": 14
+    },
+    {
+      "firstName": "Aşil",
+      "lastName": "Zeus",
+      "userName": "ashil",
+      "email": "ashil@fitmind.com",
+      "password": "12345678",
+      "phoneNumber": "5789658987",
+      "role": "user",
+      "birthYear": 2001,
+      "profilePic": "",
+      "exercises": [],
+      "bodyMeasurement": {
+        "weight": [],
+        "height": "175",
+        "targetWeight": "85",
+        "neck": "40",
+        "waist": "86",
+        "hips": "90"
+      },
+      "id": 15,
+      "gender": "true"
     }
   ],
   "exercises": []

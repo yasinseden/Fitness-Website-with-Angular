@@ -9,7 +9,7 @@ export class UserModel {
     password: string = '';
     phoneNumber: string = '';
     role: string = '';
-    gender: boolean | undefined;
+    gender: string | undefined;
     birthYear: any | null = null;
     profilePic: string = '';
     exercises: ExerciseModel[] = [];
