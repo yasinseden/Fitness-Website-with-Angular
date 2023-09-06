@@ -39,8 +39,8 @@ export class AthleteInterfaceComponent implements AfterContentChecked {
     private sidebarUserMediatorservice: SidebarUserMediatorService,
     private userInfoService: UserInfoService,
     private cdRef: ChangeDetectorRef,
-    private userHttpService: UserHttpService
-  ) {
+    private userHttpService: UserHttpService) {
+
     this.isSidebarOpenSubcription = this.sidebarUserMediatorservice.sidebarStatus$.subscribe(
       (isSidebarOpen: boolean) => {
         if (isSidebarOpen) {
@@ -54,17 +54,11 @@ export class AthleteInterfaceComponent implements AfterContentChecked {
     this.userDataSubscription = this.userInfoService.userDataObservable$.subscribe((data) => {
       this.userData = data;
     })
+    
+    
   }
 
-  ngOnInit(): void {
-    if (this.userData) {
-      this.loadChartComponent = true;
-    } else {
-      setTimeout(() => {
-        this.loadChartComponent = true;
-      }, 5000);
-    }
-  }
+
 
   @ViewChild('athleteChartComponentRef') athleteChartComponentRef: AthleteChartComponent | undefined; 
 
@@ -125,11 +119,13 @@ export class AthleteInterfaceComponent implements AfterContentChecked {
   // It's working but not the best way. Find a better way!!!
   ngAfterContentChecked(): void {
     // The time out is just show loding phase
-    setTimeout(() => {
       if (!this.userData) {
         this.userInfoService.getUserData();
       }
-    }, 2000)
+
+      if (this.userData && !this.loadChartComponent) {
+        this.loadChartComponent = true
+      }
 
     this.cdRef.detectChanges();
   }

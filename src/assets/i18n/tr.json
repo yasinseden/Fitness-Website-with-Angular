@@ -82,5 +82,26 @@
     "profile": "Profil",
     "calculator": "Hesaplayıcı",
     "settings": "Ayarlar",
-    "logout": "Çıkış Yap"
+    "logout": "Çıkış Yap",
+
+    "chartField": {
+        "weightChartLabels": [
+            "Toplam Vücut Ağırlığı (KG)",
+            "Yağsız Vücut Ağırlığı (KG)",
+            "Yağ Oranı (%)"
+        ]
+    },
+    
+    "sidebarMenuField": {
+        "athleteMenu": [
+            "Grafikleri Göster",
+            "Eğitmen Listesi"
+        ],
+        "trainerMenu": [
+            "Sporcu Listesi",
+            "Placeholder1",
+            "Placeholder2",
+            "Placeholder3"
+        ]
+    }
 }

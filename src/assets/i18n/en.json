@@ -82,5 +82,27 @@
     "profile": "Profile",
     "calculator": "Calculator",
     "settings": "Settings",
-    "logout": "Log Out"
+    "logout": "Log Out",
+    
+    "chartField": {
+        "weightChartLabels": [
+            "Total Body Mass (KG)",
+            "Lean Body Mass (KG)",
+            "Fat Percentage (%)"
+        ]
+    },
+    
+    "sidebarMenuField": {
+        "athleteMenu": [
+            "Show Charts",
+            "Trainer List"
+        ],
+        "trainerMenu": [
+            "Athlete List",
+            "Placeholder1",
+            "Placeholder2",
+            "Placeholder3"
+        ]
+    }
+    
 }

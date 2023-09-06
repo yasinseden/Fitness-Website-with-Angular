@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, RouterState, UrlSegment } from '@angular/router';
-import { MenuListProviderService } from 'src/app/shared/services/menu-list-provider.service';
+import { ActivatedRoute } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { SidebarUserMediatorService } from 'src/app/shared/services/sidebar-user-mediator.service';
 
 @Component({
@@ -17,18 +17,16 @@ export class SidebarComponent {
 
   constructor(
     private route: ActivatedRoute,
-    private menuList: MenuListProviderService,
-    private sidebarUserMediator: SidebarUserMediatorService
-  ) { }
-
-  ngOnInit(): void {
+    private sidebarUserMediator: SidebarUserMediatorService,
+    public translateService: TranslateService
+  ) {
     const routeUrl = (this.route.snapshot.children[0].url[0].path);
 
-    if (routeUrl === 'trainer') {
-      this.sidebarArr = this.menuList.trainerMenu
-    } else {
-      this.sidebarArr = this.menuList.athleteMenu
-    }
+    this.translateService.get('sidebarMenuField').subscribe(data => {
+     this.sidebarArr = routeUrl === 'trainer' ? data.trainerMenu : data.athleteMenu;
+     console.log(data);
+     
+    })
   }
 
   toggleSidebarStatus() {

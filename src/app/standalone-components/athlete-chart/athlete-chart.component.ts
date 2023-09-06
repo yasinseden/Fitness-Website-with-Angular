@@ -6,6 +6,7 @@ import { UserInfoService } from 'src/app/shared/services/user-info.service';
 import { Subscription } from 'rxjs';
 import { UserModel } from 'src/app/models/user.model';
 import { weightDataModel } from 'src/app/models/weight-data.model';
+import { ComponentCommunicationService } from 'src/app/shared/services/component-communication.service';
 
 @Component({
   selector: 'app-athlete-chart',
@@ -24,7 +25,7 @@ export class AthleteChartComponent {
   public userWeightFatPercentage: any[] = [];
   private userDataSubscription: Subscription;
 
-  constructor(private userInfoService: UserInfoService) {
+  constructor(private userInfoService: UserInfoService, private langService: ComponentCommunicationService) {
 
     this.userDataSubscription = this.userInfoService.userDataObservable$.subscribe((data) => {
       this.userData = data;
@@ -41,26 +42,28 @@ export class AthleteChartComponent {
     }
   }
 
+
+
   public lineChartData: ChartConfiguration<'line'>['data'] = {
     labels: [] = this.userWeightDateDataArr,
     datasets: [
       {
         data: [] = this.userWeightDataWeightArr,
-        label: 'Weight Data (KG)',
+        label: this.langService.setChartColoredLabels(0),
         fill: false,
         tension: 0.3,
         borderColor: 'red',
       },
       {
         data: [] = this.userWeightLeanBodyMassDataArr,
-        label: 'Lean Body Mass Data (KG)',
+        label: this.langService.setChartColoredLabels(1),
         fill: false,
         tension: 0.3,
         borderColor: 'blue',
       },
       {
         data: [] = this.userWeightFatPercentage,
-        label: 'Fat Percentage (%)',
+        label: this.langService.setChartColoredLabels(2),
         fill: false,
         tension: 0.3,
         borderColor: 'orange',
