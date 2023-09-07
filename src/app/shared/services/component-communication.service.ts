@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -19,4 +20,8 @@ export class ComponentCommunicationService {
   setChartColoredLabels(index: number): string {
     return this.selectedLang === 'en' ? this.enLabels[index] : this.trLabels[index];
   }
+
+  // To control what will be rendered into the right content field of AthleteInterfaceComponent
+  public componentToBeRenderedBehaviorSubject: Subject<string | null> = new BehaviorSubject<string | null>(null)
+  public componentToBeRenderedObservable$ = this.componentToBeRenderedBehaviorSubject.asObservable()
 }

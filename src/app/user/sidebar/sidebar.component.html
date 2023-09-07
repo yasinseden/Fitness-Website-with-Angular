@@ -2,7 +2,7 @@
     <mat-drawer #drawer mode="side" style="width: 260px; padding-top: 30px;">
         <mat-list>
             <ng-container *ngFor="let item of sidebarArr;">
-                <button style="padding: 0; background: transparent; border: none;">
+                <button style="padding: 0; background: transparent; border: none;" (click)="whichContentWillBeRendered(item)">
                     <mat-list-item style="padding-left: 15px; padding-right: 15px; cursor: pointer;">{{ item }}</mat-list-item>
                 </button>
                 <mat-divider></mat-divider>

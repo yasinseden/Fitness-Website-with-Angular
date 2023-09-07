@@ -3,6 +3,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { UserModel } from 'src/app/models/user.model';
 import { weightDataModel } from 'src/app/models/weight-data.model';
+import { ComponentCommunicationService } from 'src/app/shared/services/component-communication.service';
 import { SidebarUserMediatorService } from 'src/app/shared/services/sidebar-user-mediator.service';
 import { UserHttpService } from 'src/app/shared/services/user-http.service';
 import { UserInfoService } from 'src/app/shared/services/user-info.service';
@@ -22,8 +23,10 @@ export class AthleteInterfaceComponent implements AfterContentChecked {
   public toggleClass: string = 'change-user-card-back'
   public columnClass: string = 'col-12'
   public weightDataForTemplate: any;
+  public componentToBeRendered: string | null | undefined;
   private isSidebarOpenSubcription: Subscription;
   private userDataSubscription: Subscription;
+  private componentToBeRenderedSubscription: Subscription;
 
   userInfoUpdateForm = new FormGroup({
     weight: new FormControl(''),
@@ -39,7 +42,8 @@ export class AthleteInterfaceComponent implements AfterContentChecked {
     private sidebarUserMediatorservice: SidebarUserMediatorService,
     private userInfoService: UserInfoService,
     private cdRef: ChangeDetectorRef,
-    private userHttpService: UserHttpService) {
+    private userHttpService: UserHttpService,
+    private componentCommunicationService: ComponentCommunicationService) {
 
     this.isSidebarOpenSubcription = this.sidebarUserMediatorservice.sidebarStatus$.subscribe(
       (isSidebarOpen: boolean) => {
@@ -55,7 +59,10 @@ export class AthleteInterfaceComponent implements AfterContentChecked {
       this.userData = data;
     })
     
-    
+    // In here subscribed to observable to control selected menu name from sidebar to teke action according to the value
+    this.componentToBeRenderedSubscription = this.componentCommunicationService.componentToBeRenderedObservable$.subscribe(menuName => {
+      this.componentToBeRendered = menuName
+    })
   }
 
 
@@ -133,6 +140,8 @@ export class AthleteInterfaceComponent implements AfterContentChecked {
   ngOnDestroy(): void {
     this.isSidebarOpenSubcription.unsubscribe();
     this.userDataSubscription.unsubscribe();
+    this.componentToBeRendered = undefined
+    this.componentToBeRenderedSubscription.unsubscribe();
     this.userData = null;
     this.userInfoService.clearUserData();
   }
