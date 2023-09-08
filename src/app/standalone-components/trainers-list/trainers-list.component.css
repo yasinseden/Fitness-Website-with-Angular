@@ -1,0 +1,9 @@
+.open-details {
+    transition: height, 0.5s ease-in-out;
+    height: 200px;
+}
+
+.trainer-detail {
+    transition: height 0.5s ease-in-out;
+    height: 35px;
+}

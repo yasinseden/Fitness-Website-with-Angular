@@ -23,10 +23,11 @@ export class AthleteInterfaceComponent implements AfterContentChecked {
   public toggleClass: string = 'change-user-card-back'
   public columnClass: string = 'col-12'
   public weightDataForTemplate: any;
-  public componentToBeRendered: string | null | undefined;
+  // public componentToBeRendered: string | null | undefined;
+  public componentToBeRendered: string = 'Trainers List';
   private isSidebarOpenSubcription: Subscription;
   private userDataSubscription: Subscription;
-  private componentToBeRenderedSubscription: Subscription;
+  // private componentToBeRenderedSubscription: Subscription;
 
   userInfoUpdateForm = new FormGroup({
     weight: new FormControl(''),
@@ -60,9 +61,9 @@ export class AthleteInterfaceComponent implements AfterContentChecked {
     })
     
     // In here subscribed to observable to control selected menu name from sidebar to teke action according to the value
-    this.componentToBeRenderedSubscription = this.componentCommunicationService.componentToBeRenderedObservable$.subscribe(menuName => {
-      this.componentToBeRendered = menuName
-    })
+    // this.componentToBeRenderedSubscription = this.componentCommunicationService.componentToBeRenderedObservable$.subscribe(menuName => {
+    //   this.componentToBeRendered = menuName
+    // })
   }
 
 
@@ -140,8 +141,8 @@ export class AthleteInterfaceComponent implements AfterContentChecked {
   ngOnDestroy(): void {
     this.isSidebarOpenSubcription.unsubscribe();
     this.userDataSubscription.unsubscribe();
-    this.componentToBeRendered = undefined
-    this.componentToBeRenderedSubscription.unsubscribe();
+    // this.componentToBeRendered = undefined
+    // this.componentToBeRenderedSubscription.unsubscribe();
     this.userData = null;
     this.userInfoService.clearUserData();
   }

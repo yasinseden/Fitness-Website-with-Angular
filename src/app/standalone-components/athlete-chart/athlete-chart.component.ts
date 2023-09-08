@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, Input, ViewChild } from '@angular/core';
+import { Component, Input, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ChartConfiguration, ChartOptions } from 'chart.js';
 import { BaseChartDirective, NgChartsModule } from 'ng2-charts';
@@ -41,8 +41,6 @@ export class AthleteChartComponent {
       this.userWeightFatPercentage.push(this.userWeightData[i].fatPercentage)
     }
   }
-
-
 
   public lineChartData: ChartConfiguration<'line'>['data'] = {
     labels: [] = this.userWeightDateDataArr,

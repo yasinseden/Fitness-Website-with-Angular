@@ -1,0 +1,34 @@
+<div style="width: 100%; padding: 2em;">
+    <div style="width: 100%; background-color: rgb(81, 81, 81);">
+        <div class="row" style="background-color: inherit;">
+            <div class="col-3 p-2 d-flex flex-column align-items-center justify-content-center">
+                <div class="mb-2 mt-2" style="width: 75%; border-radius: 50%; overflow: hidden;">
+                    <img src="https://randomuser.me/api/portraits/women/71.jpg" alt="" style="width: 100%;">
+                </div>
+                <div class="mt-2 mb-2" style="text-align: center;">
+                    Body Building
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="mt-2 mb-2">
+                    <h2 style="font-size: 30px; color: rgb(188, 188, 188); font-weight: bolder;">Name Surname</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores facere repudiandae quia
+                        accusamus porro nam officiis eum nulla modi, error fuga. Voluptates quam quidem esse hic,
+                        pariatur earum, accusamus ipsam necessitatibus sint blanditiis corporis praesentium?</p>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="background-color: inherit; border-top: 1px solid black;">
+            <div [ngClass]="class" style="position: relative;">
+                <button class="w-100 pt-1 pb-1" style="background: rgb(107, 107, 107); border: none; height: 35px; position: absolute; left: 50%; transform: translateX(-50%); bottom: 0;" (click)="toggleClass()">
+                    <i class="fa-solid fa-circle-chevron-down fa-lg" style="color: rgb(188, 188, 188)"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="background-color: inherit;">
+        <div class="w-100 mt-4" style="height: 75px; background-color: aquamarine;">
+        </div>
+    </div>
+
+</div>

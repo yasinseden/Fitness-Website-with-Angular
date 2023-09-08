@@ -10,6 +10,7 @@ import { UsernavbarComponent } from './usernavbar/usernavbar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 import { AthleteChartComponent } from '../standalone-components/athlete-chart/athlete-chart.component';
+import { TrainersListComponent } from '../standalone-components/trainers-list/trainers-list.component';
 
 
 
@@ -29,6 +30,7 @@ import { AthleteChartComponent } from '../standalone-components/athlete-chart/at
     ReactiveFormsModule,
     SharedModule,
     AthleteChartComponent,
+    TrainersListComponent,
   ]
 })
 export class UserModule { }

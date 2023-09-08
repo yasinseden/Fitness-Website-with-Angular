@@ -130,10 +130,10 @@
                 </ng-template>
             </div>
             <!-- Dynamic right side field -->
-            <div
+            <div class="right-content-scrollbar"
                 style="height: 38vw; width: 775px; border: 1px solid black; overflow: hidden; background-color: rgba(66, 66, 66, 255); margin-left: 5vw; overflow: auto;">
                 <ng-container
-                    *ngIf="(componentToBeRendered === 'Show Charts') || (componentToBeRendered === 'Grafikleri Göster'); else elseTemplate">
+                    *ngIf="(componentToBeRendered === 'Show Charts') || (componentToBeRendered === 'Grafikleri Göster')">
                     <ng-container *ngIf="loadChartComponent == true; else elseTemplate">
                         <!-- This is a seperator to find the selector easily -->
                         <app-athlete-chart #athleteChartComponentRef></app-athlete-chart>
@@ -145,10 +145,16 @@
                         </div>
                     </ng-template>
                 </ng-container>
-                <ng-template #elseTemplate>
-                    <div>-------------------FUCK YOU---------------------</div>
-                </ng-template>
-
+                <ng-container *ngIf="(componentToBeRendered === 'Eğitmen Listesi') || (componentToBeRendered === 'Trainers List')">
+                    <!-- This is a seperator to find the selector easily -->
+                    <app-trainers-list></app-trainers-list>
+                    <!-- This is a seperator to find the selector easily -->
+                </ng-container>
+                <ng-container *ngIf="(componentToBeRendered === undefined) || (componentToBeRendered === null)">
+                    <div style="width: 100%; min-height: 550px; display: flex; justify-content: center; align-items: center; font-size: 35px;">
+                        PLACEHOLDER
+                    </div>
+                </ng-container>
 
             </div>
         </div>
