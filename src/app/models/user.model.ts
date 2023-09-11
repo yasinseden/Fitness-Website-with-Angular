@@ -14,5 +14,8 @@ export class UserModel {
     profilePic: string = '';
     exercises: ExerciseModel[] = [];
     bodyMeasurement: BodyMeasurementsModel = new BodyMeasurementsModel;
+    trainerDetailArr: any[] = ['details-closed', 'fa-circle-chevron-down', 'hidden']
+    expertise: string = '';
+    description: string = '';
     id: any;
 }

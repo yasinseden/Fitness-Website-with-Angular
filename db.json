@@ -20,6 +20,11 @@
         "waist": "86",
         "hips": ""
       },
+      "trainerDetailArr": [
+        "details-closed",
+        "fa-circle-chevron-down",
+        "hidden"
+      ],
       "id": 1
     },
     {
@@ -85,6 +90,11 @@
         "waist": "85",
         "hips": "90"
       },
+      "trainerDetailArr": [
+        "details-closed",
+        "fa-circle-chevron-down",
+        "hidden"
+      ],
       "id": 2
     },
     {
@@ -144,6 +154,11 @@
         "waist": "88",
         "hips": ""
       },
+      "trainerDetailArr": [
+        "details-closed",
+        "fa-circle-chevron-down",
+        "hidden"
+      ],
       "id": 3
     },
     {
@@ -166,6 +181,11 @@
         "waist": "78",
         "hips": "88"
       },
+      "trainerDetailArr": [
+        "details-closed",
+        "fa-circle-chevron-down",
+        "hidden"
+      ],
       "id": 4
     },
     {
@@ -188,6 +208,11 @@
         "waist": "",
         "hips": ""
       },
+      "trainerDetailArr": [
+        "details-closed",
+        "fa-circle-chevron-down",
+        "hidden"
+      ],
       "id": 5
     },
     {
@@ -210,6 +235,11 @@
         "waist": "",
         "hips": ""
       },
+      "trainerDetailArr": [
+        "details-closed",
+        "fa-circle-chevron-down",
+        "hidden"
+      ],
       "id": 6
     },
     {
@@ -232,6 +262,11 @@
         "waist": "",
         "hips": ""
       },
+      "trainerDetailArr": [
+        "details-closed",
+        "fa-circle-chevron-down",
+        "hidden"
+      ],
       "id": 7
     },
     {
@@ -254,6 +289,11 @@
         "waist": "",
         "hips": ""
       },
+      "trainerDetailArr": [
+        "details-closed",
+        "fa-circle-chevron-down",
+        "hidden"
+      ],
       "id": 8
     },
     {
@@ -276,6 +316,11 @@
         "waist": "",
         "hips": ""
       },
+      "trainerDetailArr": [
+        "details-closed",
+        "fa-circle-chevron-down",
+        "hidden"
+      ],
       "id": 9
     },
     {
@@ -298,6 +343,11 @@
         "waist": "",
         "hips": ""
       },
+      "trainerDetailArr": [
+        "details-closed",
+        "fa-circle-chevron-down",
+        "hidden"
+      ],
       "id": 10
     },
     {
@@ -320,6 +370,11 @@
         "waist": "",
         "hips": ""
       },
+      "trainerDetailArr": [
+        "details-closed",
+        "fa-circle-chevron-down",
+        "hidden"
+      ],
       "id": 11
     },
     {
@@ -330,18 +385,30 @@
       "password": "12345678",
       "phoneNumber": "5876985626",
       "role": "user",
-      "gender": "true",
+      "gender": "false",
       "birthYear": 1993,
       "profilePic": "",
       "exercises": [],
       "bodyMeasurement": {
-        "weight": [],
+        "weight": [
+          {
+            "weightData": "65",
+            "dateData": "2023-09-11",
+            "fatPercentage": 24,
+            "leanBodyMass": 49.4
+          }
+        ],
         "height": "172",
-        "targetWeight": "81",
-        "neck": "37",
-        "waist": "82",
+        "targetWeight": "75",
+        "neck": "32",
+        "waist": "79",
         "hips": "82"
       },
+      "trainerDetailArr": [
+        "details-closed",
+        "fa-circle-chevron-down",
+        "hidden"
+      ],
       "id": 12
     },
     {
@@ -363,8 +430,12 @@
         "waist": "",
         "hips": ""
       },
-      "id": 13,
-      "gender": "false"
+      "trainerDetailArr": [
+        "details-closed",
+        "fa-circle-chevron-down",
+        "hidden"
+      ],
+      "id": 13
     },
     {
       "firstName": "Kemal",
@@ -385,6 +456,11 @@
         "waist": "",
         "hips": ""
       },
+      "trainerDetailArr": [
+        "details-closed",
+        "fa-circle-chevron-down",
+        "hidden"
+      ],
       "id": 14
     },
     {
@@ -406,8 +482,38 @@
         "waist": "86",
         "hips": "90"
       },
-      "id": 15,
-      "gender": "true"
+      "trainerDetailArr": [
+        "details-closed",
+        "fa-circle-chevron-down",
+        "hidden"
+      ],
+      "id": 15
+    },
+    {
+      "firstName": "Cansu",
+      "lastName": "Candan",
+      "userName": "cansu2000",
+      "email": "cansu@fitmind.com",
+      "password": "12345678",
+      "phoneNumber": "5478695486",
+      "role": "admin",
+      "birthYear": 2000,
+      "profilePic": "",
+      "exercises": [],
+      "bodyMeasurement": {
+        "weight": [],
+        "height": 0,
+        "targetWeight": 0,
+        "neck": 0,
+        "waist": 0,
+        "hips": 0
+      },
+      "trainerDetailArr": [
+        "details-closed",
+        "fa-circle-chevron-down",
+        "hidden"
+      ],
+      "id": 16
     }
   ],
   "exercises": []

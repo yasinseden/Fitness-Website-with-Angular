@@ -48,7 +48,7 @@
                             </div>
                         </div>
                         <div class="my-form-field my-button-field" style="margin-top: 17px;" matRipple
-                            [matRippleCentered]="centered" matRippleColor="rgb(219, 84, 84)">
+                            [matRippleCentered]="centered" matRippleColor="rgb(149, 91, 91)">
                             <button class="update-button priority-content">
                                 {{ 'updateButton' | translate }}
                             </button>
@@ -56,7 +56,7 @@
                     </form>
                     <div class="d-flex justify-content-center align-items-center my-button-field"
                         style="border-radius: 0 0 2vw 2vw; height: 10%; border-top: 1px solid black; margin-top: -1em;"
-                        matRipple [matRippleCentered]="centered" matRippleColor="rgb(219, 84, 84)">
+                        matRipple [matRippleCentered]="centered" matRippleColor="rgb(149, 91, 91)">
                         <button class="priority-content" (click)="changeUserCard()"
                             style="padding: 0; width: 100%; height: 100%; background: transparent; border: none; color: white;">
                             <i class="fa-solid fa-circle-right fa-rotate-180"></i>
@@ -113,7 +113,7 @@
                         </div>
                         <div class="d-flex justify-content-center align-items-center my-button-field"
                             style="border-radius: 0 0 2vw 2vw; height: 10%; border-top: 1px solid black;" matRipple
-                            [matRippleCentered]="centered" matRippleColor="rgb(219, 84, 84)">
+                            [matRippleCentered]="centered" matRippleColor="rgb(149, 91, 91)">
                             <button class="priority-content" (click)="changeUserCard()"
                                 style="padding: 0; width: 100%; height: 100%; background: transparent; border: none; color: white;">
                                 {{ 'updateInfo' | translate }}
@@ -131,7 +131,7 @@
             </div>
             <!-- Dynamic right side field -->
             <div class="right-content-scrollbar"
-                style="height: 38vw; width: 775px; border: 1px solid black; overflow: hidden; background-color: rgba(66, 66, 66, 255); margin-left: 5vw; overflow: auto;">
+                style="height: 38vw; width: 775px; border: 1px solid black; overflow: hidden; background-color: rgba(66, 66, 66, 255); margin-left: 5vw; overflow-y: scroll; overflow-x: auto;">
                 <ng-container
                     *ngIf="(componentToBeRendered === 'Show Charts') || (componentToBeRendered === 'Grafikleri Göster')">
                     <ng-container *ngIf="loadChartComponent == true; else elseTemplate">

@@ -1,9 +1,58 @@
-.open-details {
-    transition: height, 0.5s ease-in-out;
-    height: 200px;
+.component-container {
+    width: 100%;
+    padding: 2em;
 }
 
-.trainer-detail {
+.fst-elt {
+    background-color: rgb(81, 81, 81);
+}
+
+.pp-field {
+    width: 75%;
+    border-radius: 50%;
+    overflow: hidden;
+
+    & img {
+        width: 100%;
+    }
+}
+
+.name-field {
+    font-size: 30px;
+    color: rgb(188, 188, 188);
+    font-weight: bolder;
+}
+
+.detailed-content-field {
+    background-color: inherit;
+    border-top: 1px solid rgb(107, 107, 107);
+}
+
+.dynamic-detail-field {
+    position: relative;
+    overflow: hidden;
+}
+
+.details-opened {
+    transition: height, 0.5s ease-in-out;
+    height: 15em;
+}
+
+.details-closed {
     transition: height 0.5s ease-in-out;
-    height: 35px;
+    height: 2.5em;
+}
+
+.trainer-detail-button {
+    background-color: rgb(107, 107, 107);
+    border: none;
+    height: 2.5em;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+
+    &:hover {
+        background-color: rgb(149, 91, 91);
+    }
 }
