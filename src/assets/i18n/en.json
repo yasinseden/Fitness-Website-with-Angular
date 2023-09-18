@@ -103,6 +103,8 @@
             "Placeholder2",
             "Placeholder3"
         ]
-    }
+    },
     
+    "datePicker": "Select Appointment Date",
+    "trainerContactInfo": "Show Trainer's Contact Info"
 }

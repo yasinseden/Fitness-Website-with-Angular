@@ -103,5 +103,8 @@
             "Placeholder2",
             "Placeholder3"
         ]
-    }
+    },
+
+    "datePicker": "Randevu Tarihini Seçin",
+    "trainerContactInfo": "Antrenörün İletişim Bilgilerini Göster"
 }

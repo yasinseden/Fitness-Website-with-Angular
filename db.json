@@ -10,7 +10,7 @@
       "role": "admin",
       "gender": "true",
       "birthYear": 1996,
-      "profilePic": "",
+      "profilePic": "https://randomuser.me/api/portraits/men/57.jpg",
       "exercises": [],
       "bodyMeasurement": {
         "weight": [],
@@ -20,11 +20,19 @@
         "waist": "86",
         "hips": ""
       },
-      "trainerDetailArr": [
-        "details-closed",
-        "fa-circle-chevron-down",
-        "hidden"
-      ],
+      "trainerDetailArr": {
+        "showDetails": [
+          "details-closed",
+          "fa-circle-chevron-down",
+          "hidden"
+        ],
+        "isExtended": "true",
+        "expertise": "Calisthenics",
+        "description": {
+          "en": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores facere repudiandae quia accusamus porro nam officiis eum nulla modi, error fuga.Voluptates quam quidem esse hic, pariatur earum, accusamus ipsam necessitatibus sint blanditiis corporis praesentium?",
+          "tr": "Fuga sit earum quidem hic esse, accusamus ipsam sint."
+        }
+      },
       "id": 1
     },
     {
@@ -82,6 +90,18 @@
             "dateData": "2023-09-05",
             "fatPercentage": 23.47,
             "leanBodyMass": 68.11
+          },
+          {
+            "weightData": "92",
+            "dateData": "2023-09-15",
+            "fatPercentage": 23.47,
+            "leanBodyMass": 70.41
+          },
+          {
+            "weightData": "98",
+            "dateData": "2023-09-18",
+            "fatPercentage": 23.47,
+            "leanBodyMass": 75
           }
         ],
         "height": "175",
@@ -90,12 +110,54 @@
         "waist": "85",
         "hips": "90"
       },
-      "trainerDetailArr": [
-        "details-closed",
-        "fa-circle-chevron-down",
-        "hidden"
-      ],
+      "trainerDetailArr": {
+        "showDetails": [
+          "details-closed",
+          "fa-circle-chevron-down",
+          "hidden"
+        ],
+        "isExtended": "true",
+        "expertise": "",
+        "description": {
+          "en": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores facere repudiandae quia accusamus porro nam officiis eum nulla modi, error fuga.Voluptates quam quidem esse hic, pariatur earum, accusamus ipsam necessitatibus sint blanditiis corporis praesentium?",
+          "tr": "Fuga sit earum quidem hic esse, accusamus ipsam sint."
+        }
+      },
       "id": 2
+    },
+    {
+      "firstName": "Açelya",
+      "lastName": "Yaylacı",
+      "userName": "acelya1998",
+      "email": "acelya@fitmind.com",
+      "password": "12345678",
+      "phoneNumber": "5786962548",
+      "role": "admin",
+      "birthYear": 1998,
+      "profilePic": "https://randomuser.me/api/portraits/women/77.jpg",
+      "exercises": [],
+      "bodyMeasurement": {
+        "weight": [],
+        "height": 0,
+        "targetWeight": 0,
+        "neck": 0,
+        "waist": 0,
+        "hips": 0
+      },
+      "trainerDetailArr": {
+        "showDetails": [
+          "details-closed",
+          "fa-circle-chevron-down",
+          "hidden"
+        ],
+        "isExtended": "true",
+        "expertise": "Plates",
+        "description": {
+          "en": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores facere repudiandae quia accusamus porro nam officiis eum nulla modi, error fuga.Voluptates quam quidem esse hic, pariatur earum, accusamus ipsam necessitatibus sint blanditiis corporis praesentium?",
+          "tr": "Fuga sit earum quidem hic esse, accusamus ipsam sint."
+        }
+      },
+      "id": 17
     },
     {
       "firstName": "Arda",
@@ -154,11 +216,19 @@
         "waist": "88",
         "hips": ""
       },
-      "trainerDetailArr": [
-        "details-closed",
-        "fa-circle-chevron-down",
-        "hidden"
-      ],
+      "trainerDetailArr": {
+        "showDetails": [
+          "details-closed",
+          "fa-circle-chevron-down",
+          "hidden"
+        ],
+        "isExtended": "true",
+        "expertise": "",
+        "description": {
+          "en": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores facere repudiandae quia accusamus porro nam officiis eum nulla modi, error fuga.Voluptates quam quidem esse hic, pariatur earum, accusamus ipsam necessitatibus sint blanditiis corporis praesentium?",
+          "tr": "Fuga sit earum quidem hic esse, accusamus ipsam sint."
+        }
+      },
       "id": 3
     },
     {
@@ -181,11 +251,19 @@
         "waist": "78",
         "hips": "88"
       },
-      "trainerDetailArr": [
-        "details-closed",
-        "fa-circle-chevron-down",
-        "hidden"
-      ],
+      "trainerDetailArr": {
+        "showDetails": [
+          "details-closed",
+          "fa-circle-chevron-down",
+          "hidden"
+        ],
+        "isExtended": "true",
+        "expertise": "",
+        "description": {
+          "en": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores facere repudiandae quia accusamus porro nam officiis eum nulla modi, error fuga.Voluptates quam quidem esse hic, pariatur earum, accusamus ipsam necessitatibus sint blanditiis corporis praesentium?",
+          "tr": "Fuga sit earum quidem hic esse, accusamus ipsam sint."
+        }
+      },
       "id": 4
     },
     {
@@ -198,7 +276,7 @@
       "role": "admin",
       "gender": "",
       "birthYear": 1997,
-      "profilePic": "",
+      "profilePic": "https://randomuser.me/api/portraits/men/89.jpg",
       "exercises": [],
       "bodyMeasurement": {
         "weight": [],
@@ -208,11 +286,19 @@
         "waist": "",
         "hips": ""
       },
-      "trainerDetailArr": [
-        "details-closed",
-        "fa-circle-chevron-down",
-        "hidden"
-      ],
+      "trainerDetailArr": {
+        "showDetails": [
+          "details-closed",
+          "fa-circle-chevron-down",
+          "hidden"
+        ],
+        "isExtended": "true",
+        "expertise": "Body Building",
+        "description": {
+          "en": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores facere repudiandae quia accusamus porro nam officiis eum nulla modi, error fuga.Voluptates quam quidem esse hic, pariatur earum, accusamus ipsam necessitatibus sint blanditiis corporis praesentium?",
+          "tr": "Fuga sit earum quidem hic esse, accusamus ipsam sint."
+        }
+      },
       "id": 5
     },
     {
@@ -235,11 +321,19 @@
         "waist": "",
         "hips": ""
       },
-      "trainerDetailArr": [
-        "details-closed",
-        "fa-circle-chevron-down",
-        "hidden"
-      ],
+      "trainerDetailArr": {
+        "showDetails": [
+          "details-closed",
+          "fa-circle-chevron-down",
+          "hidden"
+        ],
+        "isExtended": "true",
+        "expertise": "",
+        "description": {
+          "en": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores facere repudiandae quia accusamus porro nam officiis eum nulla modi, error fuga.Voluptates quam quidem esse hic, pariatur earum, accusamus ipsam necessitatibus sint blanditiis corporis praesentium?",
+          "tr": "Fuga sit earum quidem hic esse, accusamus ipsam sint."
+        }
+      },
       "id": 6
     },
     {
@@ -252,7 +346,7 @@
       "role": "admin",
       "gender": "",
       "birthYear": 1995,
-      "profilePic": "",
+      "profilePic": "https://randomuser.me/api/portraits/men/91.jpg",
       "exercises": [],
       "bodyMeasurement": {
         "weight": [],
@@ -262,11 +356,19 @@
         "waist": "",
         "hips": ""
       },
-      "trainerDetailArr": [
-        "details-closed",
-        "fa-circle-chevron-down",
-        "hidden"
-      ],
+      "trainerDetailArr": {
+        "showDetails": [
+          "details-closed",
+          "fa-circle-chevron-down",
+          "hidden"
+        ],
+        "isExtended": "true",
+        "expertise": "Power Lifting",
+        "description": {
+          "en": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores facere repudiandae quia accusamus porro nam officiis eum nulla modi, error fuga.Voluptates quam quidem esse hic, pariatur earum, accusamus ipsam necessitatibus sint blanditiis corporis praesentium?",
+          "tr": "Fuga sit earum quidem hic esse, accusamus ipsam sint."
+        }
+      },
       "id": 7
     },
     {
@@ -279,7 +381,7 @@
       "role": "admin",
       "gender": "",
       "birthYear": "1990",
-      "profilePic": "",
+      "profilePic": "https://randomuser.me/api/portraits/men/28.jpg",
       "exercises": [],
       "bodyMeasurement": {
         "weight": [],
@@ -289,11 +391,19 @@
         "waist": "",
         "hips": ""
       },
-      "trainerDetailArr": [
-        "details-closed",
-        "fa-circle-chevron-down",
-        "hidden"
-      ],
+      "trainerDetailArr": {
+        "showDetails": [
+          "details-closed",
+          "fa-circle-chevron-down",
+          "hidden"
+        ],
+        "isExtended": "true",
+        "expertise": "Body Building",
+        "description": {
+          "en": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores facere repudiandae quia accusamus porro nam officiis eum nulla modi, error fuga.Voluptates quam quidem esse hic, pariatur earum, accusamus ipsam necessitatibus sint blanditiis corporis praesentium?",
+          "tr": "Fuga sit earum quidem hic esse, accusamus ipsam sint."
+        }
+      },
       "id": 8
     },
     {
@@ -316,11 +426,19 @@
         "waist": "",
         "hips": ""
       },
-      "trainerDetailArr": [
-        "details-closed",
-        "fa-circle-chevron-down",
-        "hidden"
-      ],
+      "trainerDetailArr": {
+        "showDetails": [
+          "details-closed",
+          "fa-circle-chevron-down",
+          "hidden"
+        ],
+        "isExtended": "true",
+        "expertise": "",
+        "description": {
+          "en": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores facere repudiandae quia accusamus porro nam officiis eum nulla modi, error fuga.Voluptates quam quidem esse hic, pariatur earum, accusamus ipsam necessitatibus sint blanditiis corporis praesentium?",
+          "tr": "Fuga sit earum quidem hic esse, accusamus ipsam sint."
+        }
+      },
       "id": 9
     },
     {
@@ -343,11 +461,19 @@
         "waist": "",
         "hips": ""
       },
-      "trainerDetailArr": [
-        "details-closed",
-        "fa-circle-chevron-down",
-        "hidden"
-      ],
+      "trainerDetailArr": {
+        "showDetails": [
+          "details-closed",
+          "fa-circle-chevron-down",
+          "hidden"
+        ],
+        "isExtended": "true",
+        "expertise": "",
+        "description": {
+          "en": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores facere repudiandae quia accusamus porro nam officiis eum nulla modi, error fuga.Voluptates quam quidem esse hic, pariatur earum, accusamus ipsam necessitatibus sint blanditiis corporis praesentium?",
+          "tr": "Fuga sit earum quidem hic esse, accusamus ipsam sint."
+        }
+      },
       "id": 10
     },
     {
@@ -370,11 +496,19 @@
         "waist": "",
         "hips": ""
       },
-      "trainerDetailArr": [
-        "details-closed",
-        "fa-circle-chevron-down",
-        "hidden"
-      ],
+      "trainerDetailArr": {
+        "showDetails": [
+          "details-closed",
+          "fa-circle-chevron-down",
+          "hidden"
+        ],
+        "isExtended": "true",
+        "expertise": "",
+        "description": {
+          "en": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores facere repudiandae quia accusamus porro nam officiis eum nulla modi, error fuga.Voluptates quam quidem esse hic, pariatur earum, accusamus ipsam necessitatibus sint blanditiis corporis praesentium?",
+          "tr": "Fuga sit earum quidem hic esse, accusamus ipsam sint."
+        }
+      },
       "id": 11
     },
     {
@@ -404,11 +538,19 @@
         "waist": "79",
         "hips": "82"
       },
-      "trainerDetailArr": [
-        "details-closed",
-        "fa-circle-chevron-down",
-        "hidden"
-      ],
+      "trainerDetailArr": {
+        "showDetails": [
+          "details-closed",
+          "fa-circle-chevron-down",
+          "hidden"
+        ],
+        "isExtended": "true",
+        "expertise": "",
+        "description": {
+          "en": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores facere repudiandae quia accusamus porro nam officiis eum nulla modi, error fuga.Voluptates quam quidem esse hic, pariatur earum, accusamus ipsam necessitatibus sint blanditiis corporis praesentium?",
+          "tr": "Fuga sit earum quidem hic esse, accusamus ipsam sint."
+        }
+      },
       "id": 12
     },
     {
@@ -430,11 +572,19 @@
         "waist": "",
         "hips": ""
       },
-      "trainerDetailArr": [
-        "details-closed",
-        "fa-circle-chevron-down",
-        "hidden"
-      ],
+      "trainerDetailArr": {
+        "showDetails": [
+          "details-closed",
+          "fa-circle-chevron-down",
+          "hidden"
+        ],
+        "isExtended": "true",
+        "expertise": "",
+        "description": {
+          "en": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores facere repudiandae quia accusamus porro nam officiis eum nulla modi, error fuga.Voluptates quam quidem esse hic, pariatur earum, accusamus ipsam necessitatibus sint blanditiis corporis praesentium?",
+          "tr": "Fuga sit earum quidem hic esse, accusamus ipsam sint."
+        }
+      },
       "id": 13
     },
     {
@@ -446,7 +596,7 @@
       "phoneNumber": "5869658745",
       "role": "admin",
       "birthYear": 2001,
-      "profilePic": "",
+      "profilePic": "https://randomuser.me/api/portraits/men/44.jpg",
       "exercises": [],
       "bodyMeasurement": {
         "weight": [],
@@ -456,11 +606,19 @@
         "waist": "",
         "hips": ""
       },
-      "trainerDetailArr": [
-        "details-closed",
-        "fa-circle-chevron-down",
-        "hidden"
-      ],
+      "trainerDetailArr": {
+        "showDetails": [
+          "details-closed",
+          "fa-circle-chevron-down",
+          "hidden"
+        ],
+        "isExtended": "true",
+        "expertise": "Power Lifting",
+        "description": {
+          "en": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores facere repudiandae quia accusamus porro nam officiis eum nulla modi, error fuga.Voluptates quam quidem esse hic, pariatur earum, accusamus ipsam necessitatibus sint blanditiis corporis praesentium?",
+          "tr": "Fuga sit earum quidem hic esse, accusamus ipsam sint."
+        }
+      },
       "id": 14
     },
     {
@@ -482,11 +640,19 @@
         "waist": "86",
         "hips": "90"
       },
-      "trainerDetailArr": [
-        "details-closed",
-        "fa-circle-chevron-down",
-        "hidden"
-      ],
+      "trainerDetailArr": {
+        "showDetails": [
+          "details-closed",
+          "fa-circle-chevron-down",
+          "hidden"
+        ],
+        "isExtended": "true",
+        "expertise": "",
+        "description": {
+          "en": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores facere repudiandae quia accusamus porro nam officiis eum nulla modi, error fuga.Voluptates quam quidem esse hic, pariatur earum, accusamus ipsam necessitatibus sint blanditiis corporis praesentium?",
+          "tr": "Fuga sit earum quidem hic esse, accusamus ipsam sint."
+        }
+      },
       "id": 15
     },
     {
@@ -498,7 +664,7 @@
       "phoneNumber": "5478695486",
       "role": "admin",
       "birthYear": 2000,
-      "profilePic": "",
+      "profilePic": "https://randomuser.me/api/portraits/women/10.jpg",
       "exercises": [],
       "bodyMeasurement": {
         "weight": [],
@@ -508,11 +674,19 @@
         "waist": 0,
         "hips": 0
       },
-      "trainerDetailArr": [
-        "details-closed",
-        "fa-circle-chevron-down",
-        "hidden"
-      ],
+      "trainerDetailArr": {
+        "showDetails": [
+          "details-closed",
+          "fa-circle-chevron-down",
+          "hidden"
+        ],
+        "isExtended": "true",
+        "expertise": "Plates",
+        "description": {
+          "en": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores facere repudiandae quia accusamus porro nam officiis eum nulla modi, error fuga.Voluptates quam quidem esse hic, pariatur earum, accusamus ipsam necessitatibus sint blanditiis corporis praesentium?",
+          "tr": "Fuga sit earum quidem hic esse, accusamus ipsam sint."
+        }
+      },
       "id": 16
     }
   ],

@@ -98,7 +98,7 @@ export class AthleteInterfaceComponent implements AfterContentChecked {
       }
       if (formValue.gender) {
         this.userData.gender = formValue.gender as unknown as string;
-        userModel.gender = formValue.gender as unknown as string;        
+        userModel.gender = formValue.gender as unknown as string;
       }
       const weightData = new weightDataModel(formValue.weight as unknown as number, userModel, this.userData);
       if (formValue.weight) {

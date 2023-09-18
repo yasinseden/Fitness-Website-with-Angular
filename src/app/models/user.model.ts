@@ -14,8 +14,14 @@ export class UserModel {
     profilePic: string = '';
     exercises: ExerciseModel[] = [];
     bodyMeasurement: BodyMeasurementsModel = new BodyMeasurementsModel;
-    trainerDetailArr: any[] = ['details-closed', 'fa-circle-chevron-down', 'hidden']
-    expertise: string = '';
-    description: string = '';
+    trainerDetailArr = {
+        showDetails: ['details-closed', 'fa-circle-chevron-down', 'hidden'],
+        isExtended: false,
+        expertise: '',
+        description: {
+            en: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores facere repudiandae quia accusamus porro nam officiis eum nulla modi, error fuga.Voluptates quam quidem esse hic, pariatur earum, accusamus ipsam necessitatibus sint blanditiis corporis praesentium?',
+            tr: 'Fuga sit earum quidem hic esse, accusamus ipsam sint.'
+        }
+    }
     id: any;
 }

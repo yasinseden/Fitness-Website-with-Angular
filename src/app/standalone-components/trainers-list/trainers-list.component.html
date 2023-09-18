@@ -1,31 +1,51 @@
 <div class="component-container">
-    <div class="w-100 mb-5 fst-elt" *ngFor="let item of items">
-        <div class="row fst-elt">
+    <div class="w-100 mb-5 fst-elt" *ngFor="let trainer of trainers">
+        <div class="row fst-elt shadow-box">
             <div class="col-3 p-2 d-flex flex-column align-items-center justify-content-center">
                 <div class="mb-2 mt-2 pp-field">
-                    <img src="https://randomuser.me/api/portraits/women/71.jpg" alt="">
+                    <img src="{{ trainer.profilePic }}" alt="">
                 </div>
                 <div class="mt-2 mb-2 text-center">
-                    Body Building
+                    {{ trainer.trainerDetailArr.expertise | uppercase }}
                 </div>
             </div>
             <div class="col-9">
                 <div class="mt-2 mb-2">
-                    <h2 class="name-field">Name Surname</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores facere repudiandae quia
-                        accusamus porro nam officiis eum nulla modi, error fuga. Voluptates quam quidem esse hic,
-                        pariatur earum, accusamus ipsam necessitatibus sint blanditiis corporis praesentium?</p>
+                    <h2 class="name-field">{{ trainer.firstName }} {{ trainer.lastName }}</h2>
+                    <p *ngIf="currentLang === 'en'">{{ trainer.trainerDetailArr.description.en }}</p>
+                    <p *ngIf="currentLang === 'tr'">{{ trainer.trainerDetailArr.description.tr }}</p>
                 </div>
             </div>
         </div>
-        <div class="row detailed-content-field">
-            <div class="dynamic-detail-field" [ngClass]="item.class[0]">
-                <div class="w-100" *ngIf="item.class[2] === 'shown'">
-                    <input type="date" name="" id="">
+        <div class="row detailed-content-field shadow-box">
+            <div class="dynamic-detail-field" [ngClass]="trainer.trainerDetailArr.showDetails[0]">
+                <div class="w-100 d-flex pt-1 pb-1" style="height: 12.5em;"
+                    *ngIf="trainer.trainerDetailArr.showDetails[2] === 'shown'">
+                    <div class="d-flex flex-column align-items-center justify-content-around" style="width: 35%;">
+                        <div class="d-flex flex-column align-items-center w-100 ">
+                            <h3 class="m-0">{{ 'datePicker' | translate }}</h3>
+                            <div class="date-picker-div">
+                                <form [formGroup]="datePickingForm" (submit)="getAvailableDates()">
+                                    <input class="p-2" type="date" formControlName="currentDate" id="currentDate">
+                                    <button><i class="fa-solid fa-chevron-right" style="color: #000000;"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="trainer-contact-info-div">
+                            <button class="d-flex justify-content-between align-items-center">{{ 'trainerContactInfo' | translate }} <i class="fa-solid fa-chevron-right"
+                                    style="color: #000000; margin-right: 0.5em;"></i></button>
+                        </div>
+                    </div>
+                    <div class="bg-warning" style="width: 65%;">
+                        content
+                    </div>
                 </div>
-                <button class="w-100 pt-1 pb-1 trainer-detail-button" (click)="toggleClass(item)">
-                    <i [ngClass]="item.class[1]" class="fa-solid fa-lg" style="color: rgb(188, 188, 188)"></i>
-                </button>
+                <div>
+                    <button class="w-100 pt-1 pb-1 trainer-detail-button" (click)="toggleClass(trainer)">
+                        <i [ngClass]="trainer.trainerDetailArr.showDetails[1]" class="fa-solid fa-lg"
+                            style="color: rgb(188, 188, 188)"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
